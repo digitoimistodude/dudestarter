@@ -20,6 +20,7 @@ This is a WordPress theme for starting new projects used by [Digitoimisto Dude O
 4. [What's left out from Underscores](#whats-left-out-from-underscores)
 5. [Requirements](#requirements)
 6. [Usage](#usage)
+6. [Contributing](#contributing)
 
 ### Please note before using
 
