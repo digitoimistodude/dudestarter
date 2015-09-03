@@ -21,8 +21,8 @@ use Facebook\FacebookRequest;
 
 $pageid             = 'digitoimistodude';
 $page_owner_name    = 'Digitoimisto Dude Oy';
-$app_id             = '526300140759831'; //Facebook App ID
-$app_secret         = 'a1cb42fbac3644ce2118f3cdbbf48c95'; //Facebook App Secret
+$app_id             = 'XXXX'; //Facebook App ID
+$app_secret         = 'XXXX'; //Facebook App Secret
 $posturl            = 'https://www.facebook.com/'.$pageid.'/posts';
 $sanarajoitus 		= '100'; // Montako sanaa saa olla päivityksessä
 $statusrajoitus 	= '2'; // Montako päivitystä näytetään
