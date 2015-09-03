@@ -9,7 +9,7 @@ This is a WordPress theme for starting new projects used by [Digitoimisto Dude O
 1. [Please note before using](#please-note-before-using)
 2. [License](#license)
 3. [Features](#features)
-    1. [Layout base & grid](#layout-base-grid)
+    1. [Layout base & grid](#layout-base--grid)
     2. [Typography](#typography)
     3. [Development](#development)
     4. [Navigations included](#navigations-included)
