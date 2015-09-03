@@ -1,0 +1,73 @@
+	nav a {
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		transition: color ease-in-out .25s, background-color ease-in-out .25s, text-shadow ease-in-out .25s;
+	}
+
+	a.close-menu-btn {
+		position: absolute;
+		color: lighten($bg_alt, 25%);
+		text-decoration: none;
+		@include rem(right, 15px);
+		@include rem(font-size, 36px);
+
+		&:hover {
+	    	color: lighten($bg_alt, 20%);
+		}
+	}
+
+	nav {
+		background:rgba($bg_main, 0.9);
+		position: fixed;
+		top:-100%; left:0;
+		width:100%;
+		z-index:10;
+		transition: top ease-in-out .5s;
+
+		&.open { top: 0; }
+
+		ul {
+			margin:0; padding:0;
+			list-style:none;
+		}
+
+		li a {
+			color:$menutxt;
+			text-shadow: 1px 1px 0 lighten(rgba($menutxt, .75), 20%);
+
+			&:hover {
+				background-color:$bg_alt;
+				color:darken($menutxt, 10%);
+				text-shadow: 1px 1px 0 darken(rgba($menutxt, .75), 20%);
+			}
+		}
+	}
+
+.menu-button, #navToggle {
+	display:none;
+}
+
+.open-menu-btn {
+	position: absolute;
+	padding: 0;
+	top: 0;
+	right: 0;
+	display: block;
+	text-indent:-9999px;
+
+	&:before {
+	    border-bottom: 3px solid #fff;
+	    border-top: 9px double #fff;
+	    content: "";
+	    height: 15px;
+	    right: $defaultpadding;
+	    position: absolute;
+	    top: 11px;
+	    width: 23px;
+	}
+}
+
+.nav {
+	width:100% !important;
+}

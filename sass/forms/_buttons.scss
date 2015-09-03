@@ -1,0 +1,66 @@
+// More: https://asiakas.dude.fi/dev/buttons/
+
+.button,
+a.button,
+a.button:link,
+a.button:visited {
+	min-width: 150px;
+	max-width: 250px;
+	display: inline-block;
+	margin: 0;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-left: 33px;
+	padding-right: 33px;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	transition: 0.12s;
+
+	// Additional settings:
+	font-weight: bold;
+	// text-transform: uppercase;
+	letter-spacing: 0;
+
+	background: $color__alt;
+	color: #ffffff;
+
+	&:hover, &:focus, &:active {
+		background: darken($color__alt,15%);
+		color: darken(#ffffff,15%);
+		border-color: $color__alt;
+	}
+
+	&.button-border {
+		border-width: 3px 3px 3px 3px;
+		border-style: solid;
+		border-color: $color__alt;
+		background-color: transparent;
+
+		&:hover {
+			color: $color__base;
+			border-color: $color__base;
+			background: $color__alt;
+		}
+
+	}
+
+	&.button-white {
+		color: #ffffff;
+		border-color: #ffffff;
+
+		&:hover {
+			color: $color__base;
+			border-color: #ffffff;
+			background: #ffffff;
+		}
+
+	}
+
+}

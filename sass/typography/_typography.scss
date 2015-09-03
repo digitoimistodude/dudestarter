@@ -1,0 +1,29 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__base;
+	font-family: $font__base;
+}
+
+@import "fontface";
+@import "webfonts";
+@import "headings";
+@import "copy";
+
+// Import Sassline base SCSS files in order so variables are read correctly.
+// @import "../../../../../bower_components/sassline/assets/sass/base/reset";
+@import "../../../../../bower_components/sassline/assets/sass/base/variables";
+@import "../../../../../bower_components/sassline/assets/sass/base/modular-scale";
+@import "../../../../../bower_components/sassline/assets/sass/base/mixins";
+@import "../../../../../bower_components/sassline/assets/sass/base/typography";
+// @import "../../../../../bower_components/sassline/assets/sass/base/layouts";
+
+// Import all SCSS modules without Sass globbing.
+@import "../../../../../bower_components/sassline/assets/sass/modules/footer";
+@import "../../../../../bower_components/sassline/assets/sass/modules/globals";
+@import "../../../../../bower_components/sassline/assets/sass/modules/header";
+// @import "../../../../../bower_components/sassline/assets/sass/modules/nav";
+
+@import "knife/index";

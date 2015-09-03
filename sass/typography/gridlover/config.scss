@@ -1,0 +1,59 @@
+// http://www.gridlover.net/app/
+
+$body-font-size: 19px; // 19px
+$body-line-height: 1.555; // 1.555
+$scale-factor: 1.333;
+$computed-line-height: $body-line-height * $body-font-size;
+
+$weightvalue: (
+  thin: 	200,
+  light: 	300,
+  regular: 	400,
+  bold: 	700,
+  black: 	900
+);
+
+@mixin type-weight($weight) {
+    font-weight: map-get($weightvalue, $weight);
+}
+
+$scalevalue: (
+    huge:       5,
+    xxlarge:   	4,
+    xlarge:   	3,
+    large: 		  2,
+    medium:    	1,
+    base:     	0,
+    regular:   -1,
+    small:     -2,
+    tiny:      -3
+);
+
+@import "rhythm";
+
+body {
+  @include rhythm(0);
+}
+
+@mixin type-scale($scale, $before: 0, $after: 1) {
+    @include rhythm(map-get($scalevalue, $scale), $before, $after);
+}
+
+h1 { @include type-scale(xxlarge); }
+h2 { @include type-scale(xlarge); }
+h3 { @include type-scale(large); }
+h4 { @include type-scale(medium); }
+h5 { @include type-scale(base); }
+h6 { @include type-scale(small); }
+
+p {	@include type-scale(base); }
+
+.tiny { @include type-scale(tiny); }
+.small { @include type-scale(small); }
+.regular { @include type-scale(regular); }
+.base { @include type-scale(base); }
+.medium { @include type-scale(medium); }
+.large { @include type-scale(large); }
+.xlarge { @include type-scale(xlarge); }
+.xxlarge { @include type-scale(xxlarge); }
+.huge { @include type-scale(huge); }

@@ -1,0 +1,289 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Nested Pages\n"
+"POT-Creation-Date: 2014-11-08 19:39-0500\n"
+"PO-Revision-Date: 2014-11-17 14:48+0200\n"
+"Last-Translator: Roni Laukkarinen <roni@dude.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fi_FI\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/class-np-confirmation.php:57
+msgid "pages moved to the Trash"
+msgstr "Roskakoriin siirretyt sivut"
+
+#: includes/class-np-confirmation.php:59
+msgid "page moved to the Trash"
+msgstr "Roskakoriin siirretty sivu"
+
+#: includes/class-np-confirmation.php:64
+msgid "Undo"
+msgstr "Peru"
+
+#: includes/class-np-confirmation.php:80
+msgid "pages"
+msgstr "sivut"
+
+#: includes/class-np-confirmation.php:80
+msgid "page"
+msgstr "sivu"
+
+#: includes/class-np-confirmation.php:81
+msgid "restored from trash"
+msgstr "palautettu roskakorista"
+
+#: includes/class-np-dependencies.php:77 views/pages.php:15
+msgid "Expand Pages"
+msgstr "Laajenna Sivut"
+
+#: includes/class-np-dependencies.php:78
+msgid "Collapse Pages"
+msgstr "Tiivistä Sivut"
+
+#: includes/class-np-dependencies.php:79 views/pages.php:31
+msgid "Show Hidden"
+msgstr "Näytä piilotetut"
+
+#: includes/class-np-dependencies.php:80
+msgid "Hide Hidden"
+msgstr "Piilota piilotetut"
+
+#: includes/class-np-dependencies.php:81 views/link-form.php:13
+#: views/pages.php:8
+msgid "Add Link"
+msgstr "Lisää linkki"
+
+#: includes/class-np-dependencies.php:82
+msgid "Add Child Link"
+msgstr "Lisää alalinkki"
+
+#: includes/class-np-handler-base.php:64
+msgid "Incorrect Form Field"
+msgstr "Lomakkeen kenttä on väärin"
+
+#: includes/class-np-handler-base.php:94
+msgid "There was an error updating the page."
+msgstr "Sivua päivitettäessä tapahtui virhe"
+
+#: includes/class-np-handler-newredirect.php:40
+#: includes/class-np-handler-quickedit-redirect.php:36
+msgid "Redirect successfully updated"
+msgstr "Ohjaus päivitetty onnistuneesti"
+
+#: includes/class-np-handler-quickedit.php:37
+msgid "Post successfully updated"
+msgstr "Kirjoitus päivitetty onnistuneesti"
+
+#: includes/class-np-handler-sort.php:36
+msgid "Page order successfully updated."
+msgstr "Sivuston järjestys päivitetty onnistuneesti."
+
+#: includes/class-np-handler-sort.php:38
+msgid "There was an order updating the page order."
+msgstr "Sivujärjestystä päivitettäessä tapahtui virhe."
+
+#: includes/class-np-handler-syncmenu.php:32
+msgid "Menu sync enabled."
+msgstr "Valikon synkronointi päällä."
+
+#: includes/class-np-handler-syncmenu.php:35
+msgid "Menu sync disabled."
+msgstr "Valikon synkronointi pois päältä."
+
+#: includes/class-np-newpage.php:42
+msgid "Adding child page under:"
+msgstr "Lisätään alasivu tämän alle:"
+
+#: includes/class-np-pagelisting.php:71
+msgid "All Pages"
+msgstr "Kaikki Sivut"
+
+#: includes/class-np-pagelisting.php:72
+msgid "Add New"
+msgstr "Lisää uusi"
+
+#: includes/class-np-pagelisting.php:73
+msgid "Default Pages"
+msgstr "Oletussivut"
+
+#: includes/class-np-posttypes.php:21
+msgid "Redirects"
+msgstr "Uudelleenohjaukset"
+
+#: includes/class-np-posttypes.php:22 views/quickedit-redirect.php:8
+msgid "Redirect"
+msgstr "Uudelleenohjaus"
+
+#: includes/class-np-repository-post.php:56 views/quickedit.php:20
+msgid "Title"
+msgstr "Otsikko"
+
+#: includes/class-np-repository-post.php:256 views/quickedit-redirect.php:17
+msgid "Label"
+msgstr "Nimike"
+
+#: includes/class-np-validation.php:49 includes/class-np-validation.php:64
+msgid "Please provide a valid date."
+msgstr "Ole hyvä ja anna oikea päivämäärä."
+
+#: includes/class-np-validation.php:76
+msgid "Please provide a menu title."
+msgstr "Ole hyvä ja anna valikon otsikko."
+
+#: includes/class-np-validation.php:79
+msgid "Please provide a valid URL."
+msgstr "Ole hyvä ja anna toimiva osoite."
+
+#: includes/class-np-validation.php:90
+msgid "Please provide a "
+msgstr "Ole hyvä ja anna"
+
+#: views/link-form.php:23
+msgid "Menu Title"
+msgstr "Valikon otsikko"
+
+#: views/link-form.php:28 views/quickedit-redirect.php:22
+msgid "URL"
+msgstr "Linkki"
+
+#: views/link-form.php:33 views/quickedit-redirect.php:27
+#: views/quickedit.php:55
+msgid "Status"
+msgstr "Tila"
+
+#: views/link-form.php:36 views/pages.php:30 views/quickedit-redirect.php:30
+#: views/quickedit.php:58
+msgid "Published"
+msgstr "Julkaistu"
+
+#: views/link-form.php:37 views/quickedit-redirect.php:31
+#: views/quickedit.php:59
+msgid "Scheduled"
+msgstr "Ajastettu"
+
+#: views/link-form.php:39 views/quickedit-redirect.php:33
+#: views/quickedit.php:61
+msgid "Pending Review"
+msgstr "Odottaa arviointia"
+
+#: views/link-form.php:40 views/quickedit-redirect.php:34
+#: views/quickedit.php:62
+msgid "Draft"
+msgstr "Luonnos"
+
+#: views/link-form.php:51 views/quickedit-redirect.php:54
+#: views/quickedit.php:141
+msgid "Hide in Nav Menu"
+msgstr "Piilota päävalikosta"
+
+#: views/link-form.php:56 views/quickedit-redirect.php:60
+#: views/quickedit.php:87
+msgid "Hide in Nested Pages"
+msgstr "Piilota sisennetyistä sivuista"
+
+#: views/link-form.php:61 views/quickedit-redirect.php:66
+#: views/quickedit.php:147
+msgid "Open link in new window"
+msgstr "Avaa linkki uuteen ikkunaan"
+
+#: views/link-form.php:73
+msgid "Save Link"
+msgstr "Tallenna linkki"
+
+#: views/pages.php:21
+msgid "Sync Menu"
+msgstr "Synkronoi valikko"
+
+#: views/pages.php:29
+msgid "All"
+msgstr "Kaikki"
+
+#: views/pages.php:34
+msgid "Trash"
+msgstr "Roskakori"
+
+#: views/pages.php:37
+msgid "Default"
+msgstr "Oletus"
+
+#: views/quickedit-redirect.php:44 views/quickedit.php:129
+msgid "Title Attribute"
+msgstr "Otsikon määre"
+
+#: views/quickedit-redirect.php:48 views/quickedit.php:133
+msgid "CSS Classes"
+msgstr "CSS classit"
+
+#: views/quickedit-redirect.php:81 views/quickedit.php:161
+msgid "Cancel"
+msgstr "Peru"
+
+#: views/quickedit-redirect.php:84 views/quickedit.php:164
+msgid "Update"
+msgstr "Päivitä"
+
+#: views/quickedit.php:11 views/row-redirect.php:53 views/row.php:92
+msgid "Quick Edit"
+msgstr "Nopea muokkaus"
+
+#: views/quickedit.php:24
+msgid "Slug"
+msgstr "Osoitepolku"
+
+#: views/quickedit.php:28
+msgid "Date"
+msgstr "Päiväys"
+
+#: views/quickedit.php:46
+msgid "Author"
+msgstr "Tekijä"
+
+#: views/quickedit.php:70
+msgid "Template"
+msgstr "Sivupohja"
+
+#: views/quickedit.php:72
+msgid "Default Template"
+msgstr "Oletus sivupohja"
+
+#: views/quickedit.php:79
+msgid "Allow Comments"
+msgstr "Salli kommentointi"
+
+#: views/quickedit.php:94
+msgid "Menu Options"
+msgstr "Valikon asetukset"
+
+#: views/quickedit.php:100
+msgid "Edit Taxonomies"
+msgstr "Muokkaa taxonomeja"
+
+#: views/quickedit.php:125
+msgid "Navigation Label"
+msgstr "Navigaation nimike"
+
+#: views/row.php:42
+msgid "currently editing"
+msgstr "juuri nyt muokkaa"
+
+#: views/row.php:44
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: views/row.php:67
+msgid "Add Child"
+msgstr "Lisää lapsi"
+
+#: views/row.php:96
+msgid "View"
+msgstr "Esikatsele"

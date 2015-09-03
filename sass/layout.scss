@@ -1,0 +1,678 @@
+/*--------------------------------------------------------------
+# Reset
+--------------------------------------------------------------*/
+@import "../../../../bower_components/sanitize-css/sanitize";
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+@import "../../../../bower_components/jeet/scss/jeet/index";
+
+/*--------------------------------------------------------------
+# Glyph icons
+--------------------------------------------------------------*/
+@import "../../../../bower_components/font-awesome/scss/font-awesome";
+
+/*--------------------------------------------------------------
+# Best bits & theme options
+--------------------------------------------------------------*/
+@import "base/index";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import "mixins/mixins-master";
+@import "mixins/dudemixins";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+@import "base/dude-fingerprint";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Forms and buttons
+--------------------------------------------------------------*/
+
+// Parts from Outline:
+@import "forms/outline-variables";
+@import "../../../../bower_components/outline/scss/utils/functions";
+@import "../../../../bower_components/outline/scss/utils/mixins";
+@import "../../../../bower_components/outline/scss/utils/helpers";
+@import "../../../../bower_components/outline/scss/components/code";
+@import "../../../../bower_components/outline/scss/components/embed";
+@import "../../../../bower_components/outline/scss/components/lists";
+
+@import "forms/forms";
+
+// http://unicorn-ui.com/buttons/builder/
+// @import "../../../../bower_components/Buttons/scss/buttons";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Slider and effects (optional)
+--------------------------------------------------------------*/
+@import "../../../../bower_components/saffron/saffron/saffron";
+// @import "sliders/index";
+// @import "effects/index";
+
+
+/*--------------------------------------------------------------
+# Layout start >>>
+--------------------------------------------------------------*/
+.container
+{
+    @include center($max_width: $container-desktop, $pad: $defaultpadding);
+}
+
+a,
+a:link,
+a:visited
+{
+    text-decoration: none;
+
+    color: $color__alt;
+}
+
+a:hover,
+a:focus,
+a:active
+{
+    color: $color__base;
+}
+
+body
+{
+    font-family: $font__text;
+
+    padding: 0;
+}
+
+.entry-content
+{
+    @include krem('margin-bottom',50px);
+}
+
+.header-container
+{
+    position: relative;
+    z-index: 100;
+
+    overflow: visible;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: $nav_bg;
+
+    .container
+    {
+        position: relative;
+    }
+
+}
+
+@media(min-width:$responsivenav)
+{
+    .site-header
+    {
+        @include col(1/6, $gutter: 0);
+    }
+
+    .nav
+    {
+        @include col(5/6, $gutter: 0);
+    }
+
+    #navToggle
+    {
+        display: none;
+    }
+}
+
+@media(max-width: $responsivenav) {
+    .site-content {
+        padding-top: 50px; // menun korkeus!
+    }
+}
+
+.site-main
+{
+    @include krem('padding-top',50px);
+    @include krem('padding-bottom',50px);
+}
+
+.site-title
+{
+    font-size: 0;
+    line-height: 0;
+
+    margin: 0;
+    padding: 0;
+    a
+    {
+        font-family: $font__text;
+
+        display: inline-block;
+
+        width: $logo__width;
+        height: $logo__height;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0;
+
+        background-image: url(../images/logo.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+
+        @include hiddentext;
+        @include krem('margin-top',$menupadding);
+        @include krem('margin-bottom',$menupadding);
+    }
+}
+
+.site-description
+{
+    display: none;
+}
+
+
+/*--------------------------------------------------------------
+# Page
+--------------------------------------------------------------*/
+.content-area
+{
+    background: #fff;
+}
+
+.shade
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .7;
+    background: #444;
+}
+
+.slide
+{
+    position: relative;
+
+    color: #fff;
+    border: 0;
+    background-color: #fff;
+
+    @include krem('padding-top',$slidepadding);
+    @include krem('padding-bottom',$slidepadding);
+    @include background-cover;
+    .container
+    {
+        position: relative;
+        z-index: 3;
+    }
+    h1,
+    h2
+    {
+        margin-top: 0;
+    }
+
+    &.slide-front, &.slide-page
+    {
+        background-image: url(../images/slide-default-2.jpg);
+        h1, h2
+        {
+            color: #fff;
+
+            a {
+                color: #fff;
+            }
+        }
+        p
+        {
+            color: #fff;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+/*--------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+.entry-content {
+    overflow:hidden;
+
+    img {
+        max-width: $container-desktop;
+        height:auto;
+
+        @media(max-width:$container-ipad) {
+            width:100%;
+            height:auto;        
+        }
+
+    }
+
+    blockquote {
+        color: #666;
+
+        font-weight: regular;
+        @include krem('padding-left',20px);
+        @include krem('margin-left',0);
+        border-left: 5px solid $color__alt;
+
+        quotes: "\201C""\201D""\20'18""\2019";
+    }
+
+}
+
+img.size-full {
+    width:100%;
+    height:auto;
+}
+
+.alignright {
+    float:right;
+    text-align:right;
+    @include krem('margin-left',20px);
+    @include krem('margin-bottom',20px);
+
+    &.size-full {
+        width: auto;
+        height: auto;
+    }
+    
+}
+
+.alignleft {
+    float:left;
+    text-align:left;
+    @include krem('margin-right',20px);
+    @include krem('margin-bottom',20px);
+}
+
+
+
+.entry-title
+{
+
+    line-height: 1.2;  
+    @include krem('margin-bottom',10px);
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    a {
+        color: $color__base;
+    }
+}
+
+.entry-time
+{
+    display: block;
+
+    color: #bbb;
+
+    @include krem('margin-top',20px);
+    @include krem('margin-bottom',30px);
+}
+
+.post-meta
+{
+    clear: both;
+
+    border-top: 1px solid rgba(#000,.11);
+
+    @include krem('margin-top',50px);
+    @include krem('margin-bottom',50px);
+    .fa
+    {
+        @include krem('margin-right',5px);
+    }
+    .cat a,
+    .tags a,
+    .reply-to-comment a
+    {
+        color: #777;
+    }
+    .cat a:hover,
+    .reply-to-comment a:hover
+    {
+        color: #111;
+    }
+    .fa-tags
+    {
+        float: left;
+
+        @include krem('margin-right',8px);
+    }
+    .tags
+    {
+        overflow: hidden;
+
+        margin: 0;
+        padding: 0;
+        li
+        {
+            display: inline;
+            float: left;
+
+            margin-top: 0;
+            margin-left: 0;
+
+            @include krem('margin-right',10px);
+            @include krem('margin-bottom',10px);
+            @include krem('line-height',20px);
+            a
+            {
+                display: inline-block;
+
+                border-radius: 4px;
+                background: #f0f0f0;
+
+                @include krem('padding-top',4px);
+                @include krem('padding-bottom',4px);
+                @include krem('padding-left',10px);
+                @include krem('padding-right',10px);
+                &:hover
+                {
+                    color: #111;
+                    background: #ddd;
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Archives and search
+--------------------------------------------------------------*/
+.archive-header {
+    margin-top: 0;
+}
+
+.searchpage {
+
+    article {
+        @include krem('margin-bottom',20px);
+    }
+
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer
+{
+    overflow: hidden;
+    clear: both;
+
+    margin: 0;
+    @include krem('padding', 20px);
+
+    background: $bg_alt;
+
+    p {
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+        color: rgba(#ffffff,0.35);
+
+        a {
+           color: rgba(#ffffff,0.35); 
+        }
+    }
+
+    .site-info
+    {
+        &.left {
+            text-align: left;
+            @include col(2/3);
+
+            @media(max-width: $container-mobile) {
+                @include stack();
+                margin-bottom: 10px;
+            }
+
+        }
+
+        &.right {
+            text-align: right;
+            @include col(1/3);
+
+            @media(max-width: $container-mobile) {
+                text-align: left;
+                @include stack();
+            }
+        }
+
+    }
+
+    .address
+    {
+        text-align: right;
+    }
+
+
+}
+
+/*--------------------------------------------------------------
+# Contact and Google Maps defaults
+--------------------------------------------------------------*/
+#kartta img
+{
+    max-width: none;
+}
+.gmnoprint img
+{
+    max-width: none;
+}
+
+#map, #kartta
+{
+    position: relative;
+
+    overflow: auto;
+
+    width: 100%;
+    min-width: 100%;
+    @include krem('height',300px);
+}
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+.comment-respond
+{
+    @include krem('margin-bottom',30px);
+
+    label {
+        display: block;
+        clear: both;
+    }
+    
+}
+
+.comment-reply-title
+{
+    display: none;
+}
+
+.comment-author h3.author
+{
+    float: left;
+}
+
+.comment-meta a
+{
+    text-decoration: underline;
+
+    color: #777;
+}
+
+.comment-meta,
+a.comment-time,
+a:link.comment-time,
+a:visited.comment-time,
+.comment-time
+{
+    font-family: $font__text;
+
+    padding: 0;
+
+    text-decoration: none;
+
+    color: #999;
+
+    @include krem('font-size',16px);
+    @include krem('line-height',16px+7);
+    @include krem('margin-top',10px);
+    @include krem('margin-left',1px);
+}
+
+.comment-meta a:hover
+{
+    text-decoration: none;
+}
+
+.comment-meta
+{
+    display: block;
+    clear: both;
+}
+
+.ping-list
+{
+    @include krem('margin-bottom',40px);
+}
+
+.ping-list,
+.ping-list a
+{
+    color: #888;
+
+    @include krem('font-size',13px);
+}
+
+.ping-list cite a
+{
+    @include krem('margin-right',15px);
+}
+
+.ping-list a
+{
+    text-decoration: underline;
+}
+
+.ping-list a:hover
+{
+    text-decoration: none;
+}
+
+.comment-list
+{
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+
+    @include peruslista;
+    @include krem('margin-top',20px);
+    @include krem('margin-bottom',20px);
+}
+
+.comment-list .avatar
+{
+    float: right;
+    overflow: hidden;
+
+    @include krem('margin-left',20px);
+}
+
+.comment-author img
+{
+    border-radius: 50% 50%;
+}
+
+.comments-wrap
+{
+    text-align: left;
+
+    background: #fff;
+    ul,
+    ol
+    {
+        text-align: left;
+    }
+}
+
+.comment
+{
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+
+    @include krem('margin-top',30px);
+    @include krem('margin-bottom',30px);
+    @include krem('padding-top',20px);
+    @include krem('padding-bottom',20px);
+}
+
+#commentform code
+{
+    white-space: normal !important;
+}
+
+// Admin comments:
+
+// .comment-author-admin .the-comment p, .comment-author-admin .the-comment a {
+// 	color:#b75143 !important;
+// }
+
+// .comment-author-admin .the-comment blockquote {
+// 	border-color:#b75143 !important;
+// }
+
+.comment-author-admin .the-comment a
+{
+    text-decoration: underline;
+}
+
+.comment-author-admin .the-comment a:hover
+{
+    text-decoration: none;
+}
+
+.the-comment blockquote
+{
+    border-color: #999;
+}
+
+
+/*--------------------------------------------------------------
+# Extra
+--------------------------------------------------------------*/
+.screen-reader-text
+{
+    display: none;
+}

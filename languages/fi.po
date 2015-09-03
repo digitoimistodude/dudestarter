@@ -1,0 +1,272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: THEMENAME\n"
+"POT-Creation-Date: 2015-04-15 00:10+0200\n"
+"PO-Revision-Date: 2015-04-15 00:11+0200\n"
+"Last-Translator: Roni Laukkarinen <roni@dude.fi>\n"
+"Language-Team: Roni Laukkarinen <roni@dude.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oho! Sivua ei löydy."
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Näyttää siltä, että mitään ei löytynyt. Kokeile alla olevia linkkejä tai "
+"hakua?"
+
+#: callback-comments.php:22
+msgid "Your comment is awaiting moderation."
+msgstr "Kommenttisi on arvioitavana."
+
+#: callback-comments.php:35
+msgid "Edit comment"
+msgstr "Muokkaa kommenttia"
+
+#: callback-pingbacks.php:17
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: comments.php:43
+msgid "Pingbacks"
+msgstr "Paluuviitteet"
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr "Kommentointi on suljettu"
+
+#: content-none.php:12
+msgid "Nothing Found"
+msgstr "Mitään ei löytynyt"
+
+#: content-none.php:16
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Valmiina julkaisemaan ensimmäisen kirjoituksen? <a href=\"%1$s\">Aloita "
+"tästä</a>."
+
+#: content-none.php:20
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Emme löytäneet hakuasi vastaavaa sisältöä. Yritä uudelleen eri hakutermeillä."
+
+#: content-none.php:25
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Näyttää siltä, että hakemaasi sisältöä ei löydy. Ehkä haku auttaa?"
+
+#: content-page.php:18 content-single.php:16 content.php:23
+msgid "Pages:"
+msgstr "Sivut:"
+
+#: content-page.php:25 content-single.php:22 content-single.php:30
+#: content.php:29 front-page.php:68 functions.php:150 functions.php:178
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: content-single.php:26
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ","
+
+#: content.php:16
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Jatka artikkelin %s lukemista <span class=\"meta-nav\">&rarr;</span>"
+
+#: footer.php:13
+msgid "THEMENAME - A WordPress starter theme based on Underscores."
+msgstr "THEMENAME - WordPressin aloitusteema, joka pohjautuu Underscoresiin."
+
+#: functions.php:146
+#, php-format
+msgid "<span class=\"commentposted\">Posted on %1$s at %2$s</span>"
+msgstr "<span class=\"commentposted\">Lähetetty %1$s %2$s</span>"
+
+#: functions.php:155
+msgid "Reply"
+msgstr "Vastaa"
+
+#: functions.php:156
+msgid "Log in to reply."
+msgstr "Kirjaudu sisään vastataksesi"
+
+#: functions.php:163
+msgid ""
+"\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</"
+"span>\n"
+msgstr ""
+"\t\t\t\t\t<span class='unapproved'>Kommenttisi on arvioitavana.</span>\n"
+
+#: functions.php:174
+#, php-format
+msgid "By %1$s on %2$s at %3$s"
+msgstr "%1$s kirjoitti %2$s aikaan %3$s"
+
+#: functions.php:179
+msgid ""
+"\\t\\t\\t\\t\\t<span class=\"unapproved\">Your trackback is awaiting "
+"moderation.</span>\\n"
+msgstr ""
+"\\t\\t\\t\\t\\t<span class=\"unapproved\">Paluuviitteesi on arvioitavana.</"
+"span>\\n"
+
+#: functions.php:235
+msgid "Primary Menu"
+msgstr "Päävalikko"
+
+#: functions.php:259
+msgid "Search:"
+msgstr "Etsi:"
+
+#: functions.php:261
+msgid "Search"
+msgstr "Haku"
+
+#: functions.php:301
+#, php-format
+msgid "Page %s"
+msgstr "Sivu %s"
+
+#: functions.php:356
+#, php-format
+msgid "Category: %s"
+msgstr "Kategoria: %s"
+
+#: functions.php:358
+#, php-format
+msgid "Tag: %s"
+msgstr "Avainsana: %s"
+
+#: functions.php:360
+#, php-format
+msgid "Author: %s"
+msgstr "Tekijä: %s"
+
+#: functions.php:362
+#, php-format
+msgid "Year: %s"
+msgstr "Vuosi: %s"
+
+#: functions.php:362
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: functions.php:364
+#, php-format
+msgid "Month: %s"
+msgstr "Kuukausi: %s"
+
+#: functions.php:364
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "j F Y"
+
+#: functions.php:366
+#, php-format
+msgid "Day: %s"
+msgstr "Päivä: %s"
+
+#: functions.php:366
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "j F Y"
+
+#: functions.php:369
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "Asidet"
+
+#: functions.php:371
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "Galleriat"
+
+#: functions.php:373
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "Kuvat"
+
+#: functions.php:375
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "Videot"
+
+#: functions.php:377
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "Lainaukset"
+
+#: functions.php:379
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "Linkit"
+
+#: functions.php:381
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "Tilapäivitykset"
+
+#: functions.php:383
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "Äänet"
+
+#: functions.php:385
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "Keskustelut"
+
+#: functions.php:388
+#, php-format
+msgid "Archives: %s"
+msgstr "Arkistot: % s"
+
+#: functions.php:392
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s %2$s"
+
+#: functions.php:394
+msgid "Archives"
+msgstr "Arkistot"
+
+#: functions.php:450
+msgid "Posts navigation"
+msgstr "Artikkeleiden navigointi"
+
+#: functions.php:454
+msgid "Older posts"
+msgstr "Vanhemmat artikkelit"
+
+#: functions.php:458
+msgid "Newer posts"
+msgstr "Uudemmat artikkelit"
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hakutulokset hakusanalle %s"

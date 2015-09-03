@@ -1,0 +1,202 @@
+@import "../../../../../../bower_components/knife/knife";
+@import "breakpoint-libsass";
+
+// Modular Scale ratios cheatsheet
+$golden:           1.618;
+$minor-second:     1.067;
+$major-second:     1.125;
+$minor-third:      1.2;
+$major-third:      1.25;
+$perfect-fourth:   1.333;
+$augmented-fourth: 1.414;
+$perfect-fifth:    1.5;
+$minor-sixth:      1.6;
+$major-sixth:      1.667;
+$minor-seventh:    1.778;
+$major-seventh:    1.875;
+$octave:           2;
+$major-tenth:      2.5;
+$major-eleventh:   2.667;
+$major-twelfth:    3;
+$double-octave:    4;
+
+// Type setup
+$body-font-size:        $themeoptions-base-font-size;
+$body-line-height:      $golden; // default: golden: 1.618
+$scale-factor:          $perfect-fourth; // default: minor-third
+$ie8compatability:      true;
+
+/* Globals */
+html { @include khtml(); }
+body { @include kbody(); }
+
+$weightvalue: (
+  thin:   200,
+  light:  300,
+  regular:  400,
+  bold:   700,
+  black:  900
+);
+
+@mixin type-weight($weight) {
+    font-weight: map-get($weightvalue, $weight);
+}
+
+
+p, ul, ol, dl { 
+  @include ktype(0,0,1); 
+}
+
+small { 
+  display: inline-block;
+  @include ktype(-1,0,0); 
+}
+
+
+/// clearfix helper 
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after { 
+   clear: both;
+  }
+}
+
+%fullblock {
+  overflow: hidden;
+  text-align: center;
+  width:100%;
+}
+
+$scalevalue: (
+    huge:        5,
+    xxlarge:     4,
+    xlarge:      3,
+    large:       2,
+    medium:      1,
+    base:        0,
+    normal:     -1,
+    small:      -2,
+    tiny:       -3
+);
+
+@mixin type-scale($scale, $before: 0, $after: 1, $offset: 0, $pull: false, $push: false, $ie: $ie8compatability) {
+    @include ktype(map-get($scalevalue, $scale), $before, $after);
+}
+
+/* Headings */
+
+h1 { @include type-scale(xxlarge, 2, 1); }
+h2 { @include type-scale(xlarge, 1, 1); }
+h3 { @include type-scale(large, 1, 1); }
+h4 { @include type-scale(medium, 1, 1); }
+h5 { @include type-scale(base, 1, 0); }
+h6 { @include type-scale(normal, 1, 0); }
+
+p { @include type-scale(base); }
+
+.tiny { @include type-scale(tiny); }
+.small { @include type-scale(small); }
+.normal { @include type-scale(normal); }
+.base { @include type-scale(base); }
+.medium { @include type-scale(medium); }
+.large { @include type-scale(large); }
+.xlarge { @include type-scale(xlarge); }
+.xxlarge { @include type-scale(xxlarge); }
+.huge { @include type-scale(huge); }
+
+
+/* Mobile */
+@include breakpoint(20em) {
+
+  h1 { @include type-scale(large, 1, 1); }
+  h2 { @include type-scale(medium, 1, 1); }
+  h3 { @include type-scale(base, 1, 1); }
+  h4 { @include type-scale(base, 1, 0); }
+  h5 { @include type-scale(normal, 1, 0); }
+  h6 { @include type-scale(small, 1, 0); }
+  
+  p, ul, ol, dl, blockquote, .base { 
+    @include krem('font-size', 20px);
+  }
+
+  // Debugging:  
+  // body { border: 10px solid #e74c3c; }
+
+}
+
+/* Tablet */
+@include breakpoint(40em) {
+
+  h1 { @include type-scale(xlarge, 1, 1); }
+  h2 { @include type-scale(large, 1, 1); }
+  h3 { @include type-scale(medium, 1, 1); }
+  h4 { @include type-scale(base, 1, 0); }
+  h5 { @include type-scale(base, 1, 0); }
+  h6 { @include type-scale(small, 1, 0); }
+
+  p, ul, ol, dl, blockquote, .base { 
+    @include type-scale(base);
+  }
+
+  // Debugging:
+  // body { border: 10px solid #9b59b6; }
+
+}
+
+/* Laptop */
+@include breakpoint(60em) {
+
+  h1 { @include type-scale(xxlarge, 2, 1); }
+  h2 { @include type-scale(xlarge, 1, 1); }
+  h3 { @include type-scale(large, 1, 1); }
+  h4 { @include type-scale(medium, 1, 1); }
+  h5 { @include type-scale(base, 1, 0); }
+  h6 { @include type-scale(normal, 1, 0); }
+
+  p, ul, ol, dl, blockquote, .base { 
+    @include type-scale(base);
+  }
+  
+  // Debugging:
+  // body { border: 10px solid #3498db; }
+
+}
+
+/* Desktop */
+// @include breakpoint(80em) {
+
+//   h1 { @include type-scale(huge, 3, 1); }
+//   h2 { @include type-scale(xxlarge, 2, 1); }
+//   h3 { @include type-scale(xlarge, 1, 1); }
+//   h4 { @include type-scale(large, 1, 1); }
+//   h5 { @include type-scale(medium, 1, 1); }
+//   h6 { @include type-scale(base, 1, 0); }
+
+//   p, ul, ol, dl, blockquote, .base { 
+//     @include type-scale(medium);
+//   }
+
+//   // Debugging:
+//   //body { border: 10px solid #2ecc71; }
+
+// }
+
+/* Fix default line-height in headings and varied texts */
+h1, h2, h3, h4, h5, h6, .small, .tiny, .huge, .medium, .large, .xxlarge, small {
+  line-height: 1.3;
+}
+
+/* Font smoothing options */
+body {
+  font-smooth: always;
+  font-smoothing: antialiased;
+  text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

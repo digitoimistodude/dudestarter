@@ -1,0 +1,22 @@
+/*!
+Theme Name: THEMENAME
+Theme URI: http://www.THEMENAME.fi
+Author: Digitoimisto Dude Oy
+Author URI: http://www.dude.fi
+Description: THEMENAMEn WordPress-teema, joka perustuu dudestarteriin ja _s:ään.
+Version: 3.0.3
+Text Domain: THEMENAME
+Domain Path: /languages/
+Tags: dude, digitoimistodude, rwd, underscores, automattic
+*/
+
+/**
+   * DUDESTARTER version information
+   * Last _s commit: d02cc4f
+   *
+   * @link https://github.com/Automattic/_s/commits/master
+   *
+   * @author Roni Laukkarinen
+   * @since 24.03.2014
+   * @version 31.08.2015
+   */

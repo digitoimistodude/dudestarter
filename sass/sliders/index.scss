@@ -1,0 +1,124 @@
+@import "slick";
+
+/* -----------------------------------------------------------------------------
+    Slider
+----------------------------------------------------------------------------- */
+
+.slider {
+
+    @media(max-width: $container-mobile) {
+        // margin-top: 130px;
+        max-height: 400px !important;
+    }
+
+    // @media(max-width: $responsivenav) {
+    //     margin-top: 115px;
+    // }
+
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 0;
+
+    .slick-next {
+        right: 10px;
+    }
+
+    .slick-prev {
+        left: 10px;
+    }
+
+    .slick-next, .slick-prev {
+
+        width: 60px;
+        height: 60px; 
+        opacity: 0.3;
+
+        &:before {
+            font-size: 60px;
+        }
+    }
+
+    .slider-slide
+    {
+        // height: 100vh;
+        height: 400px;
+        overflow: hidden;
+
+        background-color: transparent;
+        background-image: url(../images/default_firstslide.jpg);
+        @include background-cover();
+
+            .container {
+                @include krem('padding-top',120px);
+                @include krem('padding-bottom',120px);
+
+                @media(max-width: $container-ipad) {
+                    @include krem('padding-top',60px);
+                    @include krem('padding-bottom',60px);
+                }
+
+            }
+
+        h1 {
+            @include krem('font-size',46px);
+            @media(max-width: $container-mobile) {
+                @include krem('font-size',25px);
+                @include krem('line-height',28px);
+            }
+            @include type-weight(bold);
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 0;
+            clear: both;
+            display: block;
+        }
+    
+        h2
+        {
+            color: #ffffff;
+    
+            @include krem('font-size',20px);
+            @include krem('line-height',28px);
+            @media(max-width: $container-mobile) {
+                @include krem('font-size',19px);
+                @include krem('line-height',24px);
+            }
+            color: #ffffff;
+            display: block;
+            @include type-weight(bold);
+    
+            @include krem('margin-top', 15px);
+            @include krem('margin-bottom', 0);
+            @include col(2/3);
+            clear: both;
+            display: block;
+        }
+
+            .slider-palsta-1 {
+    
+                h2 {
+                    @include col(3/5);
+                    @include krem('margin-top',10px);
+                }
+    
+            }
+    
+        h3 {
+        
+            @include type-weight(regular);
+            @include krem('font-size',27px);
+            @include krem('margin-top', 5px);
+            margin-bottom: 0;
+            color: #ffffff;
+    
+        }
+    
+        p
+        {
+            color: #fff;
+        }
+
+    }
+
+}
