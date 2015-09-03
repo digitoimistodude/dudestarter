@@ -119,4 +119,4 @@ Go through [Dudestack Instructions](https://github.com/digitoimistodude/dudestac
 3. Run `newtheme.sh` (requires [Dudestack](https://github.com/digitoimistodude/dudestack)'s `createproject` command to be run before)
 4. `npm install`
 5. Run `gulp watch` in project-folder
-6. Start with `sass/base/themeoptions.scss` and continue editing from there.
+6. Start with `sass/base/themeoptions.scss` and continue editing from there. The main CSS file will always be `sass/layout.scss`.
