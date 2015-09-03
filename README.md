@@ -23,7 +23,7 @@ This is a WordPress theme for starting new projects used by [Digitoimisto Dude O
 
 ### Please note before using
 
-Dudestarter is a **development theme**, so it has updates almost daily. If you use it, you agree that the fonts can change, looks can change, everything can change. Version 1 looked quite different than version 3. It was like a different theme.
+Dudestarter is a **development theme**, so it has updates almost daily. By using this starter theme, you agree that the fonts can change, layout can change, everything can change, and it will, without a warning. Version 1 looked quite different than version 3. It was like a different theme.
 
 Dudestarter is not meant to be "a theme for everyone", so it doesn't have customizers (wp-admin options), easy functions, separated theme parts (except template-parts) or any specifically easy to use stuff. This is now open-sourced, but includes a lot of custom stuff that **will not** work out of the box.
 
@@ -120,3 +120,7 @@ Go through [Dudestack Instructions](https://github.com/digitoimistodude/dudestac
 4. `npm install`
 5. Run `gulp watch` in project-folder
 6. Start with `sass/base/themeoptions.scss` and continue editing from there. The main CSS file will always be `sass/layout.scss`.
+
+### Contributing
+
+If you have ideas about the theme or spot an issue, please let us know. Before contributing ideas or reporting an issue about "missing" features or things regarding to the nature of that matter, please read [Please note](#please-note-before-using) section. Thank you very much.
