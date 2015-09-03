@@ -15,7 +15,7 @@ This is a WordPress theme for starting new projects used by [Digitoimisto Dude O
     4. [Navigations included](#navigations-included)
     5. [Forms](#forms)
     6. [Effects](#effects)
-    7. [WordPress & functions](#wordpress-functions)
+    7. [WordPress & functions](#wordpress--functions)
     8. [Integrations](#integrations)
 4. [What's left out from Underscores](#whats-left-out-from-underscores)
 5. [Requirements](#requirements)
