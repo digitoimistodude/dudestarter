@@ -87,21 +87,6 @@ define( 'uploads', ''.'media' );
 add_filter( 'option_uploads_use_yearmonth_folders', '__return_false', 100 );
 
 /*
- * Default Front Page.
- * Comment these out if you want to set up front page in wp-admin or use different language.
- */
-$etusivu = get_page_by_title( 'Etusivu' );
-update_option( 'page_on_front', $etusivu->ID );
-update_option( 'show_on_front', 'page' );
-
-/*
- * Default Blog page.
- * Comment these out if you want to set up blog page in wp-admin or use different language.
- */
-$blog   = get_page_by_title( 'Blogi' );
-update_option( 'page_for_posts', $blog->ID );
-
-/*
  * Hidden blog menu items by default.
  * Comment these out if you want to use blog or comments.
  */
