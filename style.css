@@ -4,7 +4,7 @@ Theme URI: http://www.THEMENAME.fi
 Author: Digitoimisto Dude Oy
 Author URI: http://www.dude.fi
 Description: THEMENAMEn WordPress-teema, joka perustuu dudestarteriin ja _s:ään.
-Version: 3.0.4
+Version: 3.0.5
 Text Domain: THEMENAME
 Domain Path: /languages/
 Tags: dude, digitoimistodude, rwd, underscores, automattic
@@ -12,7 +12,8 @@ Tags: dude, digitoimistodude, rwd, underscores, automattic
 
 /**
    * DUDESTARTER version information
-   * Last _s commit: d02cc4f
+   * Last _s commit checked: 8cd7903 (no useful parts this time)
+   *
    *
    * @link https://github.com/Automattic/_s/commits/master
    *
