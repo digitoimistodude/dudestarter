@@ -189,14 +189,3 @@ p { @include type-scale(base); }
 h1, h2, h3, h4, h5, h6, .small, .tiny, .huge, .medium, .large, .xxlarge, small {
   line-height: 1.3;
 }
-
-/* Font smoothing options */
-body {
-  font-smooth: always;
-  font-smoothing: antialiased;
-  text-size-adjust: none;
-  text-rendering: optimizeLegibility;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}

@@ -27,3 +27,14 @@ textarea {
 // @import "../../../../../bower_components/sassline/assets/sass/modules/nav";
 
 @import "knife/index";
+
+// Font smoothing options
+body {
+  font-smooth: always;
+  font-smoothing: antialiased;
+  text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
