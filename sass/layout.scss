@@ -71,7 +71,7 @@
 
 
 /*--------------------------------------------------------------
-# Layout start >>>
+# Layout start, the fundamentals >>>
 --------------------------------------------------------------*/
 .container
 {
@@ -124,24 +124,82 @@ body
         position: relative;
     }
 
+    .site-header {
+
+        overflow: visible;
+
+        @media(min-width: $responsivenav) {
+            @include span(2/6);
+        }
+
+        .site-title
+        {
+            font-size: 0;
+            line-height: 0;
+        
+            margin: 0;
+            padding: 0;
+            a
+            {
+                font-family: $font__text;
+        
+                display: inline-block;
+        
+                width: $logo__width;
+                height: $logo__height;
+                margin-right: 0;
+                margin-left: 0;
+                @media(max-width: $responsivenav) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                padding: 0;
+        
+                background-image: url(../images/logo.svg);
+                background-repeat: no-repeat;
+                background-position: top left;
+                background-size: contain;
+        
+                @include hiddentext;
+            }
+        }
+
+        .nav-toggle {
+            position: absolute;
+            @include krem('padding-left', 15px);
+            @include krem('padding-top', 15px);
+            margin-left: 0;
+            top: 1px;
+            left: 0;
+            display: none;
+            list-style: none;
+            display: block;
+            z-index: 100000;
+
+            @media(min-width: $responsivenav) {
+                display: none;
+            }
+        
+            .burger-icon {
+                @include burger(20px, 3px, 3px, #ffffff);
+            }
+        
+            &.open .burger-icon {
+                @include burger-to-cross;
+            }
+        }
+
+    }
+
 }
 
-@media(min-width:$responsivenav)
+@media(min-width: $responsivenav)
 {
-    .site-header
-    {
-        @include col(1/6, $gutter: 0);
-    }
-
     .nav
     {
-        @include col(5/6, $gutter: 0);
+        @include span(4/6);
     }
 
-    #navToggle
-    {
-        display: none;
-    }
 }
 
 @media(max-width: $responsivenav) {
@@ -154,41 +212,6 @@ body
 {
     @include krem('padding-top',50px);
     @include krem('padding-bottom',50px);
-}
-
-.site-title
-{
-    font-size: 0;
-    line-height: 0;
-
-    margin: 0;
-    padding: 0;
-    a
-    {
-        font-family: $font__text;
-
-        display: inline-block;
-
-        width: $logo__width;
-        height: $logo__height;
-        margin-right: 0;
-        margin-left: 0;
-        padding: 0;
-
-        background-image: url(../images/logo.svg);
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-size: contain;
-
-        @include hiddentext;
-        @include krem('margin-top',$menupadding);
-        @include krem('margin-bottom',$menupadding);
-    }
-}
-
-.site-description
-{
-    display: none;
 }
 
 

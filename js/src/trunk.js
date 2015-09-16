@@ -26,7 +26,7 @@ $(function() {
 
     var clickevent = 'MSPointerDown';
 
-    $('#navToggle').on(clickevent, function(event) {
+    $('.nav-toggle').on(clickevent, function(event) {
         event.stopPropagation();
         event.preventDefault();
         if (content.hasClass('open')) {
@@ -41,7 +41,7 @@ $(function() {
 
         var clickevent = 'touchstart';
 
-    $('#navToggle').click(function() {
+    $('.nav-toggle').click(function() {
         event.stopPropagation();
         event.preventDefault();
         if (content.hasClass('open')) {

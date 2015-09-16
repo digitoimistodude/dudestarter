@@ -44,19 +44,18 @@
 		<header class="site-header navslide">
 	
 				<div class="logoarea">
-					<ul id="navToggle" class="burger navslide">
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-	
+
+					<div class="nav-toggle">
+            			<a href="#" class="nav-toggle navslide" id="navToggle"><span class="burger-icon"></span></a>
+            		</div>
+
 				<div class="site-branding">
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php else : ?>
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 					<?php endif; ?>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					<p class="site-description screen-reader-text"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
 
 				</div>

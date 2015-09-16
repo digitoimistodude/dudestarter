@@ -13,36 +13,6 @@ body {
 	-ms-backface-visibility: hidden;
 }
 
-.burger {
-	position: absolute;
-	@include krem('padding-left', 15px);
-	@include krem('padding-top', 15px);
-	margin-left: 0;
-	left: 0;
-	display: none;
-	list-style: none;
-	display: block;
-	z-index: 100000;
-	cursor: pointer;
-
-	li {
-		width: 20px;
-		height: 3px;
-		background: $menutxt;
-		border-radius: 0;
-		margin: 3px 0;
-	}
-
-	&.open {
-
-		li {
-			opacity:0.3;
-		}
-
-	}
-
-}
-
 nav {
 	li {
 		float: left;

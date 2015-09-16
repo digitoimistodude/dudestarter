@@ -1,16 +1,8 @@
-.overlay-close, #navicon, #open-menu-btn {
-	display:none;
-}
-
 .menu {
-	-webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
   transition: none;
 	-webkit-transform-style: preserve-3d; // stop webkit flicker
-  // overflow: hidden;
 	margin: 0 auto;
-	// width: 100%;
+
 	@media(min-width:$responsivenav) {
 		float:right;
 	}
@@ -23,9 +15,6 @@
 	&.menu-show {
 		max-height: 2000px;
     	opacity: 1;
-		-webkit-transition: all .5s ease-in-out;
-    	-moz-transition: all .5s ease-in-out;
-    	-ms-transition: all .5s ease-in-out;
     	transition: all .5s ease-in-out;
 	}
 	&.one-page {
@@ -92,7 +81,6 @@
 		}
 		.navicon {
 			position: relative;
-			// top: 1.4em;
 			font-size: 12px;
 			color: #666;
 		}
