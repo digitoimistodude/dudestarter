@@ -40,11 +40,16 @@ read -e THEMENAME
 # BASE="skeleton"
 # fi
 
-echo "${yellow}Copying starter theme to project folder ~/Projects/${PROJECTNAME}/content/themes/${THEMENAME}${txtreset}"
+PROJECTPATH="${HOME}/Projects/${PROJECTNAME}"
+STARTERTHEMEPATH="${HOME}/dudestarter"
+PROJECTTHEMEPATH="${HOME}/Projects/${PROJECTNAME}/content/themes/${THEMENAME}"
 
-PROJECTPATH="~/Projects/${PROJECTNAME}"
-STARTERTHEMEPATH="~/Projects/dudetest/content/themes/dudestarter"
-PROJECTTHEMEPATH="~/Projects/${PROJECTNAME}/content/themes/${THEMENAME}"
+echo "${yellow}Checking dudestarter updates...${txtreset}"
+cd $HOME
+git clone git@github.com:digitoimistodude/dudestarter.git
+cd $STARTERTHEMEPATH
+git pull
+echo "${yellow}Copying starter theme to project folder ${HOME}/Projects/${PROJECTNAME}/content/themes/${THEMENAME}${txtreset}"
 
 cp -R ${STARTERTHEMEPATH} ${PROJECTTHEMEPATH} 
 echo "${yellow}Generating theme files${txtreset}"
@@ -126,7 +131,7 @@ sed -e "s/\PROJECTNAME/$PROJECTNAME/" -e "s/\PROJECTNAME/$PROJECTNAME/" -e "s/\P
 echo "${yellow}Installing and updating local node.js packages (may take a while)${txtreset}"
 cd "$HOME/Projects/$PROJECTNAME"
 npm-check-updates -u
-npm install
+sudo npm install
 
 echo "${yellow}Generating gulpfile.js from git@github.com:digitoimistodude/devpackages.git${txtreset}"
 sed -e "s/\THEMENAME/$THEMENAME/" -e "s/\THEMENAME/$THEMENAME/" -e "s/\THEMENAME/$THEMENAME/" $PROJECTPATH/devpackages/gulpfile.js > $PROJECTPATH/gulpfile_temp.js
