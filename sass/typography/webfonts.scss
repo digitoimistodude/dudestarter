@@ -67,7 +67,7 @@
 
 /* Noto Serif
 ------------------------------------ */
-@include fontFace('Noto Serif','../fonts/NotoSerif-Regular-webfont', 400);
-@include fontFace('Noto Serif','../fonts/NotoSerif-Italic-webfont', 400, italic);
-@include fontFace('Noto Serif','../fonts/NotoSerif-Bold-webfont', 700);
-@include fontFace('Noto Serif','../fonts/NotoSerif-BoldItalic-webfont', 700, italic);
+@include fontFace('Noto Serif','../fonts/notoserif-regular', 400);
+@include fontFace('Noto Serif','../fonts/notoserif-italic', 400, italic);
+@include fontFace('Noto Serif','../fonts/notoserif-bold', 700);
+@include fontFace('Noto Serif','../fonts/notoserif-bolditalic', 700, italic);
