@@ -263,21 +263,15 @@
 	}
 }
 
-/* Jos trunkia ei ole käytössä niin piilotetaan trunkin valinta, muussa tapauksessa trunk yliajaa tämän: */
-
-.burger {
-	display:none;
-}
-
 @media(max-width:$responsivenav) {
 	#menu {
-		margin:0;
-		padding:0;
+		margin: 0;
+		padding: 0;
 	}
 	body .header-container {
-		position:static;
+		position: static;
 	}
 	.menu-button, .menu-button.one-page {
-		position:absolute;
+		position: absolute;
 	}
 }
