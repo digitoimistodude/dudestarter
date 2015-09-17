@@ -44,7 +44,7 @@ if( function_exists('acf_add_options_page') ) {
  * Custom icons for admin menus
  */
 function fontawesome_dashboard() {
-   wp_enqueue_style('fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css', '', '4.2.0', 'all'); 
+   wp_enqueue_style('fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css', '', '4.4.0', 'all'); 
 }
  
 add_action('admin_init', 'fontawesome_dashboard');
