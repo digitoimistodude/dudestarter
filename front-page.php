@@ -27,20 +27,20 @@ get_header(); ?>
 	<div id="primary" class="content-area front-page-content">
 		<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<div class="container">
+		<div class="container">
 			
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-					<?php the_content(); ?>
-					<?php edit_post_link( __( 'Edit', 'THEMENAME' ), '<p class="edit">', '</p>' ); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+	
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+						<?php the_content(); ?>
+						<?php edit_post_link( __( 'Edit', 'THEMENAME' ), '<p class="edit">', '</p>' ); ?>
+					
+					</article><!-- #post-## -->
 				
-				</article><!-- #post-## -->
-			
-			</div><!--/.container-->
+			<?php endwhile; // end of the loop. ?>
 
-		<?php endwhile; // end of the loop. ?>
+		</div><!--/.container-->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
