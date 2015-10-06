@@ -101,11 +101,6 @@ body
     padding: 0;
 }
 
-.entry-content
-{
-    @include krem('margin-bottom',50px);
-}
-
 .header-container
 {
     position: relative;
@@ -287,6 +282,7 @@ body
 --------------------------------------------------------------*/
 .entry-content {
     overflow:hidden;
+    @include krem('margin-bottom',50px);
 
     img {
         max-width: $container-desktop;
@@ -313,8 +309,8 @@ body
 }
 
 img.size-full {
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
 }
 
 .alignright {
