@@ -5,7 +5,7 @@
  * @package THEMENAME
  */
 
-/*
+/**
  * Remove query strings from static resources
  *
  * @link https://wordpress.org/support/topic/how-to-remove-query-strings-from-static-resources
@@ -138,26 +138,26 @@ function remove_admin_menu_links() {
 add_action('admin_menu', 'remove_admin_menu_links', 999);
 remove_theme_support( 'genesis-admin-menu' );
 
-/*
+/**
  * Automatic Feed Links is a theme feature introduced with Version 3.0. This feature adds RSS feed links to HTML <head>.
  *
  * @link https://codex.wordpress.org/Automatic_Feed_Links
  */
 add_theme_support( 'automatic-feed-links' );
 
-/**
+/*
  * Dude scripts
  * Sets up theme defaults and registers support for various WordPress features.
  */
 
-/*
+/**
  * Enable language support.
  *
  * @link https://codex.wordpress.org/Function_Reference/load_theme_textdomain
  */
 load_theme_textdomain( 'THEMENAME', get_template_directory() . '/languages' );
 
-/*
+/**
  * Custom jQuery.
  * Disable WordPress core jQuery and use your own library.
  *
@@ -170,7 +170,7 @@ function oma_jquery() {
    // wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/src/jquery.js', array(), '1.10.2', false );
 }
 
-/*
+/**
  * Custom comments and pingbacks.
  * A Strategy To Separate Comments and Pingbacks in WordPress
  * 
@@ -245,7 +245,7 @@ function commenter_link() {
     echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
 } // end commenter_link
 
-/**
+/*
  * Don't count pingbacks or trackbacks when determining
  * the number of comments on a post.
  */
@@ -297,7 +297,7 @@ register_nav_menus( array(
 	'primary' => __( 'Primary Menu', 'THEMENAME' ),
 ) );
 
-/*
+/**
  * Remove WordPress Admin Bar
  *
  * @link http://davidwalsh.name/remove-wordpress-admin-bar-css
@@ -387,7 +387,7 @@ endif;
  * I don't see why it could not be here.
  *
  * Add theme support for Infinite Scroll.
- * See: http://jetpack.me/support/infinite-scroll/
+ * @link http://jetpack.me/support/infinite-scroll/
  */
 function THEMENAME_jetpack_setup() {
   add_theme_support( 'infinite-scroll', array(
