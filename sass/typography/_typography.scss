@@ -29,7 +29,7 @@ textarea {
 @import "knife/index";
 
 // Font smoothing options
-body {
+body, html * {
   font-smooth: always;
   font-smoothing: antialiased;
   text-size-adjust: none;
