@@ -364,8 +364,6 @@ img.size-full {
 {
     clear: both;
 
-    border-top: 1px solid rgba(#000,.11);
-
     @include krem('margin-top',50px);
     @include krem('margin-bottom',50px);
     .fa
