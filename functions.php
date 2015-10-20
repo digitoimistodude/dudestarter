@@ -43,21 +43,19 @@ if( function_exists('acf_add_options_page') ) {
 /*
  * Custom icons for admin menus
  */
-function fontawesome_dashboard() {
-   wp_enqueue_style('fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css', '', '4.4.0', 'all'); 
+function FontAwesome_icons() {
+    echo '<link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+          <style type="text/css">
+          #adminmenu #menu-posts-custom-post-type .wp-menu-image:before {
+            content: "\f135";
+            font-family: "FontAwesome" !important;
+            font-size: 18px !important;
+          }
+          </style>
+    ';
 }
- 
-add_action('admin_init', 'fontawesome_dashboard');
-
-function fontawesome_icon_dashboard() {
-   echo "<style type='text/css' media='screen'>
-   #adminmenu .toplevel_page_sivuston-alaosa div.wp-menu-image:before {
-   font-family: Fontawesome !important;
-   content: '\\f276';
-   }
-   </style>";
-}
-add_action('admin_head', 'fontawesome_icon_dashboard');
+add_action('admin_head', 'FontAwesome_icons');
+add_action('wp_head', 'FontAwesome_icons');
 
 /*
  * Custom wp-admin CSS
