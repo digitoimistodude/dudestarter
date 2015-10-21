@@ -42,20 +42,7 @@
 /*--------------------------------------------------------------
 # Forms and buttons
 --------------------------------------------------------------*/
-
-// Parts from Outline:
-@import "forms/outline-variables";
-@import "../../../../bower_components/outline/scss/utils/functions";
-@import "../../../../bower_components/outline/scss/utils/mixins";
-@import "../../../../bower_components/outline/scss/utils/helpers";
-@import "../../../../bower_components/outline/scss/components/code";
-@import "../../../../bower_components/outline/scss/components/embed";
-@import "../../../../bower_components/outline/scss/components/lists";
-
 @import "forms/forms";
-
-// http://unicorn-ui.com/buttons/builder/
-// @import "../../../../bower_components/Buttons/scss/buttons";
 
 /*--------------------------------------------------------------
 # Media
@@ -66,9 +53,6 @@
 # Slider and effects (optional)
 --------------------------------------------------------------*/
 @import "../../../../bower_components/saffron/saffron/saffron";
-// @import "sliders/index";
-// @import "effects/index";
-
 
 /*--------------------------------------------------------------
 # Layout start, the fundamentals >>>
