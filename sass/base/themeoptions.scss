@@ -16,7 +16,7 @@ Sassline, Gridlover Sassy-Gridlover: no units (e.g.: 19)
 Please add rest of the type settings in typography.scss
 -------------
 */
-$themeoptions-base-font-size: 21px;
+$themeoptions-base-font-size: 19px;
 
 // Headings, titles
 $font__headings: "Open Sans", Helvetica, sans-serif;
@@ -97,6 +97,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font__headings;
 	color: $color__base;
+	line-height: 1.5;
 }
 
 p, ul, ol, dl, span, small, blockquote {
