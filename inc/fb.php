@@ -31,7 +31,7 @@ endif;
    *
    * @author Roni Laukkarinen
    * @since 30.10.2014
-   * @version 15.04.2015
+   * @version 26.10.2015
    */
 
 
@@ -113,9 +113,7 @@ if(
     && !strpos($tarina,'updated their cover photo') !== false
 
     // Päivityksen pitää tulla sivun omistajalta
-
-    && 
-    array_search( $page_owner_name, $post['from'] )
+    && !strpos($tarina, $page_owner_name)
     ) :
 
     if ( empty($tarina) === false ) :
