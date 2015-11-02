@@ -4,8 +4,6 @@
 //@include fontFace('Proxima Nova','../fonts/proximanova-italic', 400, italic);
 
 // Google web fonts:
-// TODO: Update to Pennman's working code later: https://github.com/penman/Sass-Web-Fonts/issues/14#issuecomment-152984625
 
-//$url: web-fonts-url("Open Sans", ("Ubuntu": ("400", "italic")));
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Noto+Serif:400,400italic,700,700italic");
+$url: web-fonts-url(("Open Sans": ("400", "400 italic", "700", "700 italic")), ("Noto Serif": ("400", "400 italic", "700", "700 italic")));
+@import url($url);
