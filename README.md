@@ -41,7 +41,7 @@ Dudestarter is licensed with [The MIT License (MIT)](http://choosealicense.com/l
 * All good things from the latest [Underscores](https://github.com/Automattic/_s)
 * Tiny bits and pieces, (the good) parts from [Bootstrap 3.1.1](https://github.com/twbs/bootstrap)
 * [SASS](http://sass-lang.com/)-support (SCSS-syntax)
-* CSS reset with a combination with Nicolas Gallagher's [normalize*css](https://github.com/necolas/normalize.css/) and Jonathan Neal's [sanitize.css](https://github.com/jonathantneal/sanitize.css)
+* CSS reset with a combination with Nicolas Gallagher's [normalize*css](https://github.com/necolas/normalize.css/) and (optionally) Jonathan Neal's [sanitize.css](https://github.com/jonathantneal/sanitize.css)
 * [Jeet](https://github.com/mojotech/jeet) Grid for SASS `@include col(1/100)`
 * Parts from [Outline](https://github.com/matt-harris/outline)
 * Miscellaneous custom dudemixins
