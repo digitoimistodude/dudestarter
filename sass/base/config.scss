@@ -26,11 +26,12 @@ $color__link-hover: darken($color__alt, 15%);
 $color__grey: #a1acb5;
 $color__grey-light: #dce8ef;
 $color__grey-dark: #333;
+$color__background__alt: #31323F;
+$color__background_footer: #31323F;
 
 // Trunk navigation
 $trunk_bg: #1f2028;
 $trunk_txt: #ffffff;
-$bg_alt: #31323F;
 
 // Main navigation
 $menupadding: 0;
@@ -39,7 +40,7 @@ $menutxtsize: base;
 $menuhover: rgba($menutxt,0.5);
 $menuactive: $color__alt;
 $nav_bg: #333333;
-$top_level: $bg_alt;
+$top_level: $color__background__alt;
 $second_level: lighten($nav_bg,2);
 $third_level: lighten($nav_bg,4);
 $fourth_level: lighten($nav_bg,6);

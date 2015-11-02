@@ -369,7 +369,7 @@ img.size-full {
   clear: both;
   margin: 0;
   @include krem('padding', 20px);
-  background: $bg_alt;
+  background: $color__background_footer;
 
   p {
     padding: 0;
