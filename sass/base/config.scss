@@ -10,6 +10,7 @@ $logo__width: 66px;
 $logo__height: 50px;
 
 // Typography
+$font__size__baseline: 16px; // Note: this has to be 16px for correct rem-mixin results
 $font__size__min: 17px;
 $font__size__base: 19px;
 $font__headings: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;

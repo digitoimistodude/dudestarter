@@ -23,7 +23,7 @@ textarea {
 
 // Import SASS-rem.
 @import "../../../../../bower_components/sass-rem/rem";
-$rem-baseline: $font__size__base;
+$rem-baseline: $font__size__baseline;
 
 html {
 	@include rem-baseline;
