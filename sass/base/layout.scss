@@ -135,7 +135,7 @@ body {
       z-index: 100000;
 
       @media (min-width: $responsivenav) {
-      display: none;
+        display: none;
       }
 
       .burger-icon {
@@ -153,19 +153,6 @@ body {
   .nav {
     @include span(4/6);
   }
-}
-
-@media (max-width: $responsivenav) {
-  .site-content {
-    padding-top: 50px;
-
-    // menun korkeus!
-  }
-}
-
-.site-main {
-  @include krem('padding-top', 50px);
-  @include krem('padding-bottom', 50px);
 }
 
 /*--------------------------------------------------------------
