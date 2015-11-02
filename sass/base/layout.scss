@@ -249,30 +249,6 @@ body {
   }
 }
 
-img.size-full {
-  width: 100%;
-  height: auto;
-}
-
-.alignright {
-  float: right;
-  text-align: right;
-  @include krem('margin-left', 20px);
-  @include krem('margin-bottom', 20px);
-
-  &.size-full {
-    width: auto;
-    height: auto;
-  }
-}
-
-.alignleft {
-  float: left;
-  text-align: left;
-  @include krem('margin-right', 20px);
-  @include krem('margin-bottom', 20px);
-}
-
 .entry-title {
   line-height: 1.2;
   @include krem('margin-bottom', 10px);
@@ -348,6 +324,54 @@ img.size-full {
       }
     }
   }
+}
+
+// WordPress Image Styling
+// http://www.wpfill.me/
+
+.alignleft {
+    float: left;
+    margin: 0 15px 30px 0;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 30px auto;
+}
+.alignright {
+    float: right;
+    margin: 0 0 30px 15px;
+}
+.alignnone {
+    float: none;
+    display: block;
+    margin: 0 0 30px 0;
+}
+.size-full {
+    width: 100%;
+    height: auto;
+    margin: 0 0 30px 0;
+}
+p .alignleft {
+    float: left;
+    margin: 5px 15px 30px 0;
+}
+p .aligncenter {
+    display: block;
+    margin: 5px auto 30px auto;
+}
+p .alignright {
+    float: right;
+    margin: 5px 0 30px 15px;
+}
+p .alignnone {
+    float: none;
+    display: block;
+    margin: 5px 0 30px 0;
+}
+p .size-full {
+    width: 100%;
+    height: auto;
+    margin: 5px 0 30px 0;
 }
 
 /*--------------------------------------------------------------
