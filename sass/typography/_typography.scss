@@ -34,8 +34,8 @@ html {
 
 // Typographic settings for dudestarter
 $header-font-weight: 700;
-$min-font: 18px;
-$max-font: 20px;
+$min-font: $font__size__min;
+$max-font: $font__size__base;
 $header-ratio: $golden;
 @include typographic();
 
