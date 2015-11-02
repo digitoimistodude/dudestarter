@@ -57,6 +57,18 @@
   @include center($max_width: $container-desktop, $pad: $defaultpadding);
 }
 
+@media (min-width: $responsivenav) {
+  
+  .header-container .site-header {
+      @include span(1/6);
+  }
+
+  .nav {
+      @include span(5/6);
+  }
+
+}
+
 a,
 a:link,
 a:visited {
@@ -90,10 +102,6 @@ body {
 
   .site-header {
     overflow: visible;
-
-    @media (min-width: $responsivenav) {
-      @include span(2/6);
-    }
 
     .site-title {
       font-size: 0;
@@ -146,12 +154,6 @@ body {
         @include burger-to-cross;
       }
     }
-  }
-}
-
-@media (min-width: $responsivenav) {
-  .nav {
-    @include span(4/6);
   }
 }
 

@@ -1,97 +1,81 @@
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-.nav
-{
-    ul {
+.nav {
+  ul {
+    margin: 0;
+    padding: 0;
 
-        margin: 0;
-        padding: 0;
+    li {
+      .touch-button {
+        margin-left: 10px;
+        color: rgba($menutxt, 0.5);
 
-        li
-        {
-            .touch-button {
-                margin-left: 10px;
-                color: rgba($menutxt,0.5);
+        .navicon {
+          @include krem('font-size', 18px);
+          @include vertical-align();
+          transform: translateY(-70%);
+        }
+      }
 
-                .navicon {
-                   @include krem('font-size', 18px); 
-                   @include vertical-align();
-                   transform: translateY(-70%);
-                }
-            }
+      &.current-menu-item {
+        a {
+          color: $menuactive;
+        }
+      }
 
-            &.current-menu-item
-            {
-                a
-                {
-                    color: $menuactive;
-                }
-            }
-            a
-            {
-                color: $menutxt;
-                background: transparent;
-    
-                @include krem('padding-top',15px);
-                @include krem('padding-bottom',14px);
-                @include krem('padding-left',20px);
-                @include krem('padding-right',20px);
-    
-                @include krem('font-size',16px);
-                @include krem('line-height',22px);
-    
-                @media(max-width:$container-ipad)
-                {
-                    @include krem('padding-left',12px);
-                    @include krem('padding-right',12px);
-                    @include krem('padding-top',10px);
-                    @include krem('padding-bottom',10px);
-                }
+      a {
+        color: $menutxt;
+        background: transparent;
+        @include krem('padding-top', 15px);
+        @include krem('padding-bottom', 15px);
+        @include krem('padding-left', 20px);
+        @include krem('padding-right', 20px);
+        @include krem('font-size', 16px);
+        @include krem('line-height', 22px);
 
-                &:hover
-                {
-                    color: $menuhover;
-                }
-            }
-        
-        /* Dropdown
+        @media (max-width: $container-ipad) {
+          @include krem('padding-left', 12px);
+          @include krem('padding-right', 12px);
+          @include krem('padding-top', 10px);
+          @include krem('padding-bottom', 10px);
+        }
+
+        &:hover {
+          color: $menuhover;
+        }
+      }
+
+      /* Dropdown
         ------------------------------------ */
+      &.item-with-ul,
+      &.menu-item-has-children {
+        margin: -1px;
+        padding: 0;
+        white-space: nowrap;
+        overflow: visible;
 
-        &.item-with-ul, &.menu-item-has-children {
+        ul {
+          @include krem('margin-top', 0);
+          @include krem('padding-bottom', 4px);
+          @include krem('padding-top', 4px);
+          @include krem('padding-left', 13px);
+          @include krem('padding-right', 13px);
+          background: #000000;
 
-            margin: -1px;
+          li {
+            @include krem('margin-top', 5px);
+            @include krem('margin-bottom', 5px);
             padding: 0;
-            white-space: nowrap;
-            overflow: visible;
 
-            ul {
-
-                @include krem('margin-top', 0);
-                @include krem('padding-bottom', 4px);
-                @include krem('padding-top', 4px);
-                @include krem('padding-left', 13px);
-                @include krem('padding-right', 13px);
-                background: #000000;
-                
-                li {
-
-                    @include krem('margin-top', 5px);
-                    @include krem('margin-bottom', 5px);
-                    padding: 0;
-                    
-                    a {
-                        margin: 0;
-                        padding: 0;
-                        background: transparent;
-                    }
-
-                }
-
+            a {
+              margin: 0;
+              padding: 0;
+              background: transparent;
             }
-
+          }
         }
-
-        }
+      }
     }
+  }
 }
