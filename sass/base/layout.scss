@@ -401,58 +401,8 @@ p .size-full {
     padding: 0;
     margin: 0;
     overflow: auto;
-    color: rgba(#ffffff, 0.35);
-
-    a {
-      color: rgba(#ffffff, 0.35);
-    }
+    color: invert($color__background_footer);
   }
-
-  .site-info {
-    &.left {
-      text-align: left;
-      @include col(2/3);
-
-      @media (max-width: $container-mobile) {
-        @include stack();
-      margin-bottom: 10px;
-      }
-    }
-
-    &.right {
-      text-align: right;
-      @include col(1/3);
-
-      @media (max-width: $container-mobile) {
-      text-align: left;
-        @include stack();
-      }
-    }
-  }
-
-  .address {
-    text-align: right;
-  }
-}
-
-/*--------------------------------------------------------------
-# Contact and Google Maps defaults
---------------------------------------------------------------*/
-#kartta img {
-  max-width: none;
-}
-
-.gmnoprint img {
-  max-width: none;
-}
-
-#map,
-#kartta {
-  position: relative;
-  overflow: auto;
-  width: 100%;
-  min-width: 100%;
-  @include krem('height', 300px);
 }
 
 /*--------------------------------------------------------------
