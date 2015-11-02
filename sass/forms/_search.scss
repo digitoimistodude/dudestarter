@@ -11,8 +11,8 @@
         border-style: solid;
         border-color: $color__alt;
 
-        @include krem('padding', 12px);
-        @include krem('margin-right', 5px);
+        @include rem('padding', 12px);
+        @include rem('margin-right', 5px);
     }
     input[type='submit'],
     input[type='button']

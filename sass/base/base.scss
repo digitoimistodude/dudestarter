@@ -48,7 +48,6 @@ sub,
 sup {
   position: relative;
   font-size: 75%;
-  line-height: 0;
   vertical-align: baseline;
 }
 sup {
@@ -112,9 +111,6 @@ input::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-input {
-  line-height: normal;
-}
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -168,7 +164,6 @@ code {
   padding: 2px 4px;
   font-size: 90%;
   color: #c7254e;
-  // white-space: nowrap;
   background-color: #f9f2f4;
   border-radius: 4px;
 }
@@ -195,7 +190,6 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
-  line-height: 1.42857143;
   color: #333;
   word-break: break-all;
   word-wrap: break-word;

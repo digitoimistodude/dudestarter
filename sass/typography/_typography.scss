@@ -21,20 +21,28 @@ textarea {
 @import "headings";
 @import "copy";
 
-// Import Sassline base SCSS files in order so variables are read correctly.
-@import "../../../../../bower_components/sassline/assets/sass/base/variables";
-@import "../../../../../bower_components/sassline/assets/sass/base/modular-scale";
-@import "../../../../../bower_components/sassline/assets/sass/base/mixins";
-@import "../../../../../bower_components/sassline/assets/sass/base/typography";
+// Import SASS-rem.
+@import "../../../../../bower_components/sass-rem/rem";
+$rem-baseline: $font__size__base;
 
-// Import all SCSS modules without Sass globbing.
-// Note: https://github.com/designbyjake/sassline/issues/27
-@import "../../../../../bower_components/sassline/assets/sass/modules/footer";
-@import "../../../../../bower_components/sassline/assets/sass/modules/globals";
-@import "../../../../../bower_components/sassline/assets/sass/modules/header";
+html {
+	@include rem-baseline;
+}
 
-// Import knife mixins to use with sassline base
-@import "knife/index";
+// Import Typographic
+@import "../../../../../bower_components/typographic/scss/typographic";
+
+// Typographic settings for dudestarter
+$header-font-weight: 700;
+$min-font: 18px;
+$max-font: 20px;
+$header-ratio: $golden;
+@include typographic();
+
+// Fix code line-height.
+big, code, small, sub, sup {
+  line-height: inherit;
+}
 
 // Font smoothing options
 body, html * {

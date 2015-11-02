@@ -27,7 +27,7 @@ nav {
 }
 
 body .site-header {
-	@include krem(padding,$menupadding);
+	@include rem('padding', $menupadding);
 }
 
 .site-header {
@@ -105,10 +105,10 @@ nav, nav.nav {
 			float: none;
 
 			a {
-				@include krem('padding-top',15px);
-				@include krem('padding-bottom',15px);
-				@include krem('padding-left',15px);
-				@include krem('padding-right',15px);
+				@include rem('padding-top',15px);
+				@include rem('padding-bottom',15px);
+				@include rem('padding-left',15px);
+				@include rem('padding-right',15px);
 
 				&.logo {
 					display: none;
@@ -127,10 +127,10 @@ nav, nav.nav {
 					width: 100%;
 
 					a, ul li a {
-						@include krem('padding-top',15px);
-						@include krem('padding-bottom',15px);
-						@include krem('padding-left',15px);
-						@include krem('padding-right',15px);
+						@include rem('padding-top',15px);
+						@include rem('padding-bottom',15px);
+						@include rem('padding-left',15px);
+						@include rem('padding-right',15px);
 						color: rgba($trunk_txt,0.8) !important;
 					}
 				}
@@ -141,10 +141,10 @@ nav, nav.nav {
 			width: 100%;
 
 			a, ul li a {
-				@include krem('padding-top',15px);
-				@include krem('padding-bottom',15px);
-				@include krem('padding-left',15px);
-				@include krem('padding-right',15px);
+				@include rem('padding-top',15px);
+				@include rem('padding-bottom',15px);
+				@include rem('padding-left',15px);
+				@include rem('padding-right',15px);
 				color: rgba($trunk_txt,0.8) !important;
 			}
 		}

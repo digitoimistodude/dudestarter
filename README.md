@@ -48,9 +48,9 @@ Dudestarter is licensed with [The MIT License (MIT)](http://choosealicense.com/l
 
 #### Typography
 
-* Scalable and responsive typography: Modified [Sassline 2.1](https://github.com/designbyjake/sassline)with a spice of [knife](https://github.com/Pushplaybang/knife), vertical rhythm / modular scale with `@include type-scale('size')` mixin
-* Bunch of the most common modern webfonts preloaded locally by default (Lato, Open Sans, Source Sans Pro, Roboto, Montserrat) with [Sass Boilerplate's fontFace-mixin](https://github.com/magnetikonline/sassboilerplate/blob/master/fontface.scss)
-* REM units with a combination of [drublic's px to rem mixin](https://github.com/drublic/Sass-Mixins/blob/master/partials/_rem.scss) `@include rem('padding', '10px)` and [knife](https://github.com/Pushplaybang/knife)  `@include krem('padding', '10px)`.
+* Scalable and responsive typography with font stacks: [Typographic](https://github.com/corysimmons/typographic) 
+* Add Google Webfonts with Penman's [Sass-Web-Fonts](https://github.com/penman/Sass-Web-Fonts) and custom web fonts with [Sass Boilerplate's fontFace-mixin](https://github.com/magnetikonline/sassboilerplate/blob/master/fontface.scss)
+* REM units with pixel fallback: [sass-rem](https://github.com/pierreburel/sass-rem) `@include rem('padding', '10px)`
 * [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) Glyph icons
 
 #### Development
