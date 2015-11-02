@@ -6,53 +6,54 @@
 /*--------------------------------------------------------------
 # Reset
 --------------------------------------------------------------*/
-@import "../../../../bower_components/sanitize-css/sanitize";
+@import "../../../../../bower_components/sanitize-css/sanitize";
 
 /*--------------------------------------------------------------
 # Grid
 --------------------------------------------------------------*/
-@import "../../../../bower_components/jeet/scss/jeet/index";
+@import "../../../../../bower_components/jeet/scss/jeet/index";
 
 /*--------------------------------------------------------------
 # Glyph icons
 --------------------------------------------------------------*/
-@import "../../../../bower_components/font-awesome/scss/font-awesome";
+@import "../../../../../bower_components/font-awesome/scss/font-awesome";
 
 /*--------------------------------------------------------------
 # Best bits & theme options
 --------------------------------------------------------------*/
-@import "base/index";
+@import "base";
+@import "config";
 
 /*--------------------------------------------------------------
 # Mixins
 --------------------------------------------------------------*/
-@import "mixins/mixins-master";
-@import "mixins/dudemixins";
+@import "../mixins/mixins-master";
+@import "../mixins/dudemixins";
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import "../typography/typography";
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@import "../navigation/navigation";
 
 /*--------------------------------------------------------------
 # Forms and buttons
 --------------------------------------------------------------*/
-@import "forms/forms";
+@import "../forms/forms";
 
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-@import "media/media";
+@import "../media/media";
 
 /*--------------------------------------------------------------
 # Slider and effects (optional)
 --------------------------------------------------------------*/
-@import "../../../../bower_components/saffron/saffron/saffron";
+@import "../../../../../bower_components/saffron/saffron/saffron";
 
 /*--------------------------------------------------------------
 # Layout start, the fundamentals >>>

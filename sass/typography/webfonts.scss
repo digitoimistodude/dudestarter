@@ -1,73 +1,11 @@
-/*--------------------------------------------------------------
-# Webfonts
-----------------------------------------------------------------
-# Here you can see the most generic webfonts we use.
-# Please do remove the lines of fonts and weights you don't need,
-# otherwise they will weight up your output CSS file.
---------------------------------------------------------------*/
+// Custom web fonts:
 
-/* Lato
------------------------------------- */
-@include fontFace('Lato','../fonts/lato-hairline-webfont', 100);
-@include fontFace('Lato','../fonts/lato-hairlineitalic-webfont', 100, italic);
-@include fontFace('Lato','../fonts/lato-light-webfont', 300);
-@include fontFace('Lato','../fonts/lato-lightitalic-webfont', 300, italic);
-@include fontFace('Lato','../fonts/lato-regular-webfont', 400);
-@include fontFace('Lato','../fonts/lato-italic-webfont', 400, italic);
-@include fontFace('Lato','../fonts/lato-bold-webfont', 700);
-@include fontFace('Lato','../fonts/lato-bolditalic-webfont', 700, italic);
-@include fontFace('Lato','../fonts/lato-black-webfont', 900);
-@include fontFace('Lato','../fonts/lato-blackitalic-webfont', 900, italic);
+//@include fontFace('Proxima Nova','../fonts/proximanova-regular', 400);
+//@include fontFace('Proxima Nova','../fonts/proximanova-italic', 400, italic);
 
-/* Open Sans
------------------------------------- */
-@include fontFace('Open Sans','../fonts/opensans-light-webfont', 300);
-@include fontFace('Open Sans','../fonts/opensans-lightitalic-webfont', 300, italic);
-@include fontFace('Open Sans','../fonts/opensans-regular-webfont', 400);
-@include fontFace('Open Sans','../fonts/opensans-italic-webfont', 400, italic);
-@include fontFace('Open Sans','../fonts/opensans-semibold-webfont', 600);
-@include fontFace('Open Sans','../fonts/opensans-semibolditalic-webfont', 600, italic);
-@include fontFace('Open Sans','../fonts/opensans-bold-webfont', 700);
-@include fontFace('Open Sans','../fonts/opensans-bolditalic-webfont', 700, italic);
-@include fontFace('Open Sans','../fonts/opensans-extrabold-webfont', 800);
-@include fontFace('Open Sans','../fonts/opensans-extrabolditalic-webfont', 800, italic);
+// Google web fonts:
+// TODO: Update to Pennman's working code later: https://github.com/penman/Sass-Web-Fonts/issues/14#issuecomment-152984625
 
-/* Source Sans Pro
------------------------------------- */
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-extralight-webfont', 200);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-extralightitalic-webfont', 200, italic);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-light-webfont', 300);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-lightitalic-webfont', 300, italic);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-regular-webfont', 400);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-italic-webfont', 400, italic);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-semibold-webfont', 600);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-semibolditalic-webfont', 600, italic);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-bold-webfont', 700);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-bolditalic-webfont', 700, italic);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-black-webfont', 900);
-@include fontFace('Source Sans Pro','../fonts/sourcesanspro-blackitalic-webfont', 900, italic);
+//$url: web-fonts-url("Open Sans", ("Ubuntu": ("400", "italic")));
 
-/* Roboto
------------------------------------- */
-@include fontFace('Roboto','../fonts/roboto-thin-webfont', 200);
-@include fontFace('Roboto','../fonts/roboto-thinitalic-webfont', 200, italic);
-@include fontFace('Roboto','../fonts/roboto-light-webfont', 300);
-@include fontFace('Roboto','../fonts/roboto-lightitalic-webfont', 300, italic);
-@include fontFace('Roboto','../fonts/roboto-regular-webfont', 400);
-@include fontFace('Roboto','../fonts/roboto-italic-webfont', 400, italic);
-@include fontFace('Roboto','../fonts/roboto-bold-webfont', 700);
-@include fontFace('Roboto','../fonts/roboto-bolditalic-webfont', 700, italic);
-@include fontFace('Roboto','../fonts/roboto-black-webfont', 900);
-@include fontFace('Roboto','../fonts/roboto-blackitalic-webfont', 900, italic);
-
-/* Montserrat
------------------------------------- */
-@include fontFace('Montserrat','../fonts/montserrat-regular-webfont', 400);
-@include fontFace('Montserrat','../fonts/montserrat-bold-webfont', 700);
-
-/* Noto Serif
------------------------------------- */
-@include fontFace('Noto Serif','../fonts/notoserif-regular', 400);
-@include fontFace('Noto Serif','../fonts/notoserif-italic', 400, italic);
-@include fontFace('Noto Serif','../fonts/notoserif-bold', 700);
-@include fontFace('Noto Serif','../fonts/notoserif-bolditalic', 700, italic);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Noto+Serif:400,400italic,700,700italic");

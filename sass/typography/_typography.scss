@@ -7,8 +7,17 @@ textarea {
 	font-family: $font__base;
 }
 
+// Import Pennman's mixin for Google Web Fonts.
+// Note about libsass-compatibility: https://github.com/penman/Sass-Web-Fonts/issues/14
+@import "../../../../../bower_components/sass-web-fonts/web-fonts";
+
+// Import Sass-boilerplate font-face mixin for custom webfonts.
 @import "fontface";
+
+// Declare actual webfonts in use.
 @import "webfonts";
+
+// Underscores font setting files.
 @import "headings";
 @import "copy";
 
