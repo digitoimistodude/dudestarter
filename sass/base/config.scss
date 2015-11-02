@@ -83,14 +83,3 @@ html {
 img { 
 	box-sizing: content-box; 
 }
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: $font__headings;
-	color: $color__base;
-	line-height: 1.5;
-}
-
-p, ul, ol, dl, span, small, blockquote {
-	font-family: $font__text;
-	color: $color__text;
-}

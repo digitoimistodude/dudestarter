@@ -54,3 +54,16 @@ body, html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// Heading font stack to config.
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headings;
+	color: $color__base;
+	line-height: 1.5;
+}
+
+// Text font stack according to config.
+p, ul, ol, dl, span, small, blockquote {
+	font-family: $font__text;
+	color: $color__text;
+}
