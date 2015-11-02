@@ -516,7 +516,6 @@ a:visited.comment-time,
   margin-right: 0;
   margin-left: 0;
   padding: 0;
-  @include peruslista;
   @include krem('margin-top', 20px);
   @include krem('margin-bottom', 20px);
 }

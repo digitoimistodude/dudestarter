@@ -9,23 +9,12 @@ This is the core file where most of the theme magic happens.
 $logo__width: 66px;
 $logo__height: 50px;
 
-/* Font sizes 
-------------- 
-Typomatic2 & knife: only pixels (e.g.: 19px)
-Sassline, Gridlover Sassy-Gridlover: no units (e.g.: 19)
-Please add rest of the type settings in typography.scss
--------------
-*/
-$themeoptions-base-font-size: 19px;
-
-// Headings, titles
+// Typography
+$font__size__base: 19px;
 $font__headings: "Open Sans", Helvetica, sans-serif;
-
-// Paragraphs
 $font__text: "Noto Serif", Helvetica, sans-serif; 
-
-// Everything else
-$font__base: "Open Sans", Helvetica, sans-serif; 
+$font__base: "Open Sans", Helvetica, sans-serif;
+$font__special: "Open Sans", Helvetica, sans-serif; 
 
 // Colors
 $color__base: #222222;
