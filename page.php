@@ -14,7 +14,7 @@ get_header(); ?>
 
 	<?php $artikkelikuva = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 
-	<div class="slide slide-page" style="background-image:url('<?php if ( has_post_thumbnail() ) : ?><?php echo $artikkelikuva; ?><?php else : ?><?php echo get_template_directory_uri(); ?>/images/slide-default-2.jpg<?php endif; ?>');">
+	<div class="slide slide-page" style="background-image:url('<?php if ( has_post_thumbnail() ) : ?><?php echo $artikkelikuva; ?><?php else : ?><?php echo get_template_directory_uri(); ?>/images/slide-default.jpg<?php endif; ?>');">
 		<div class="shade"></div>
 	
 		<div class="container">

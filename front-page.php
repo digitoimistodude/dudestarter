@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="slide slide-front" style="background-image:url(<?php if ( has_post_thumbnail($id)) : ?><?php echo wp_get_attachment_url( get_post_thumbnail_id($id) ); ?><?php else: ?><?php echo get_template_directory_uri(); ?>/images/slide-default-3.jpg<?php endif; ?>);">
+<div class="slide slide-front" style="background-image:url(<?php if ( has_post_thumbnail($id)) : ?><?php echo wp_get_attachment_url( get_post_thumbnail_id($id) ); ?><?php else: ?><?php echo get_template_directory_uri(); ?>/images/slide-default.jpg<?php endif; ?>);">
 <div class="shade"></div>
 
 	<div class="container">
