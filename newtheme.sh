@@ -60,8 +60,6 @@ sed -e "s/\THEMENAME/$THEMENAME/" -e "s/\THEMENAME/$THEMENAME/" -e "s/\THEMENAME
 echo "${boldgreen}archive.php generated${txtreset}"
 sed -e "s/\THEMENAME/$THEMENAME/" ${STARTERTHEMEPATH}/comments.php > ${PROJECTTHEMEPATH}/comments.php
 echo "${boldgreen}comments.php generated${txtreset}"
-sed -e "s/\THEMENAME/$THEMENAME/" ${STARTERTHEMEPATH}/sass/layout.scss > ${PROJECTTHEMEPATH}/sass/layout.scss
-echo "${boldgreen}css/layout.scss generated${txtreset}"
 sed -e "s/\THEMENAME/$THEMENAME/" -e "s/\THEMENAME/$THEMENAME/" -e "s/\THEMENAME/$THEMENAME/" ${STARTERTHEMEPATH}/footer.php > ${PROJECTTHEMEPATH}/footer.php
 echo "${boldgreen}footer.php generated${txtreset}"
 sed -e "s/\THEMENAME/$THEMENAME/" ${STARTERTHEMEPATH}/header.php > ${PROJECTTHEMEPATH}/header.php
