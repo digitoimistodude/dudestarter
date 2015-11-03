@@ -32,14 +32,6 @@ read -e PROJECTNAME
 echo "${boldyellow}Theme name in lowercase (no spaces or special characters):${txtreset} "
 read -e THEMENAME
 
-# TODO:
-# read -p "${boldyellow}Use as base: a) twitter bootstrap, b) skeleton?${txtreset} " CONT
-# if [ "$CONT" == "a" ]; then
-# BASE="bootstrap"
-# else
-# BASE="skeleton"
-# fi
-
 PROJECTPATH="${HOME}/Projects/${PROJECTNAME}"
 STARTERTHEMEPATH="${HOME}/dudestarter"
 PROJECTTHEMEPATH="${HOME}/Projects/${PROJECTNAME}/content/themes/${THEMENAME}"
@@ -90,30 +82,6 @@ sed -e "s/\THEMENAME/$THEMENAME/" ${STARTERTHEMEPATH}/template-parts/content-sea
 echo "${boldgreen}content-search.php generated${txtreset}"
 sed -e "s/\THEMENAME/$THEMENAME/" ${STARTERTHEMEPATH}/template-parts/content-single.php > ${PROJECTTHEMEPATH}/template-parts/content-single.php
 echo "${boldgreen}content-single.php generated${txtreset}"
-
-if [ "$CONT" == "b" ]; then
-echo "${yellow}Generating grids for skeleton${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/404.php > ${PROJECTTHEMEPATH}/404.php
-echo "${boldgreen}404.php generated${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/archive.php > ${PROJECTTHEMEPATH}/archive.php
-echo "${boldgreen}archive.php generated${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/comments.php > ${PROJECTTHEMEPATH}/comments.php
-echo "${boldgreen}comments.php generated${txtreset}"
-echo "${yellow}Generating grids for skeleton${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/footer.php > ${PROJECTTHEMEPATH}/footer.php
-echo "${boldgreen}footer.php generated${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/header.php > ${PROJECTTHEMEPATH}/header.php
-echo "${boldgreen}header.php generated${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/index.php > ${PROJECTTHEMEPATH}/index.php
-echo "${boldgreen}index.php generated${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/page.php > ${PROJECTTHEMEPATH}/page.php
-echo "${boldgreen}page.php generated${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/search.php > ${PROJECTTHEMEPATH}/search.php
-echo "${boldgreen}search.php generated${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/sidebar.php > ${PROJECTTHEMEPATH}/sidebar.php
-echo "${boldgreen}sidebar.php generated${txtreset}"
-sed -e "s/\col-md-2/two columns/" -e "s/\col-md-3/three columns/" -e "s/\col-md-4/four columns/" -e "s/\col-md-5/five columns/" -e "s/\col-md-6/six columns/" -e "s/\col-md-7/seven columns/" -e "s/\col-md-8/eight columns/" -e "s/\col-md-9/nine columns/" -e "s/\col-md-10/ten columns/" -e "s/\col-md-11/eleven columns/" -e "s/\col-xs-2/two columns/" -e "s/\col-xs-3/three columns/" -e "s/\col-xs-4/four columns/" -e "s/\col-xs-5/five columns/" -e "s/\col-xs-6/six columns/" -e "s/\col-xs-7/seven columns/" -e "s/\col-xs-8/eight columns/" -e "s/\col-xs-9/nine columns/" -e "s/\col-xs-10/ten columns/" -e "s/\col-xs-11/eleven columns/" ${STARTERTHEMEPATH}/single.php > ${PROJECTTHEMEPATH}/single.php
-echo "${boldgreen}single.php generated${txtreset}"
 
 # TODO:
 #echo "${yellow}Generating responsive nav${txtreset}"
