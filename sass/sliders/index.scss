@@ -49,23 +49,23 @@
         @include background-cover();
 
             .container {
-                @include krem('padding-top',120px);
-                @include krem('padding-bottom',120px);
+                @include rem('padding-top',120px);
+                @include rem('padding-bottom',120px);
 
                 @media(max-width: $container-ipad) {
-                    @include krem('padding-top',60px);
-                    @include krem('padding-bottom',60px);
+                    @include rem('padding-top',60px);
+                    @include rem('padding-bottom',60px);
                 }
 
             }
 
         h1 {
-            @include krem('font-size',46px);
+            @include rem('font-size',46px);
             @media(max-width: $container-mobile) {
-                @include krem('font-size',25px);
-                @include krem('line-height',28px);
+                @include rem('font-size',25px);
+                @include rem('line-height',28px);
             }
-            @include type-weight(bold);
+            font-weight: 700;
             text-transform: uppercase;
             color: #ffffff;
             margin-top: 0;
@@ -78,18 +78,18 @@
         {
             color: #ffffff;
     
-            @include krem('font-size',20px);
-            @include krem('line-height',28px);
+            @include rem('font-size',20px);
+            @include rem('line-height',28px);
             @media(max-width: $container-mobile) {
-                @include krem('font-size',19px);
-                @include krem('line-height',24px);
+                @include rem('font-size',19px);
+                @include rem('line-height',24px);
             }
             color: #ffffff;
             display: block;
-            @include type-weight(bold);
+            font-weight: 700;
     
-            @include krem('margin-top', 15px);
-            @include krem('margin-bottom', 0);
+            @include rem('margin-top', 15px);
+            @include rem('margin-bottom', 0);
             @include col(2/3);
             clear: both;
             display: block;
@@ -99,16 +99,16 @@
     
                 h2 {
                     @include col(3/5);
-                    @include krem('margin-top',10px);
+                    @include rem('margin-top',10px);
                 }
     
             }
     
         h3 {
         
-            @include type-weight(regular);
-            @include krem('font-size',27px);
-            @include krem('margin-top', 5px);
+            font-weight: 400;
+            @include rem('font-size',27px);
+            @include rem('margin-top', 5px);
             margin-bottom: 0;
             color: #ffffff;
     
