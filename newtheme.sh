@@ -83,12 +83,6 @@ echo "${boldgreen}content-search.php generated${txtreset}"
 sed -e "s/\THEMENAME/$THEMENAME/" ${STARTERTHEMEPATH}/template-parts/content-single.php > ${PROJECTTHEMEPATH}/template-parts/content-single.php
 echo "${boldgreen}content-single.php generated${txtreset}"
 
-# TODO:
-#echo "${yellow}Generating responsive nav${txtreset}"
-#awk '/bootstrap-js/ { print; print "new line"; next }1' ${PROJECTTHEMEPATH}/index.php > test.php.edited && rm test.php && mv test.php.edited test.php
-
-fi
-
 echo "${yellow}Setting up package.json & gulpfile.js from devpackages github${txtreset}"
 cd ${PROJECTPATH}
 git clone git@github.com:digitoimistodude/devpackages.git
