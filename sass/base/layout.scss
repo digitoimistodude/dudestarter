@@ -1,72 +1,70 @@
-/*--------------------------------------------------------------
-# Root
---------------------------------------------------------------*/
-@charset "UTF-8" ;
+// --------------------------------------------------------------
+// Root
+// --------------------------------------------------------------
+@charset 'UTF-8' ;
 
-/*--------------------------------------------------------------
-# Reset
---------------------------------------------------------------*/
-@import "../../../../../bower_components/normalize-scss/_normalize";
+// --------------------------------------------------------------
+// Reset
+// --------------------------------------------------------------
+@import '../../../../../bower_components/normalize-scss/normalize';
 
-/*--------------------------------------------------------------
-# Grid
---------------------------------------------------------------*/
-@import "../../../../../bower_components/jeet/scss/jeet/index";
+// --------------------------------------------------------------
+// Grid
+// --------------------------------------------------------------
+@import '../../../../../bower_components/jeet/scss/jeet/index';
 
-/*--------------------------------------------------------------
-# Glyph icons
---------------------------------------------------------------*/
-@import "../../../../../bower_components/font-awesome/scss/font-awesome";
+// --------------------------------------------------------------
+// Glyph icons
+// --------------------------------------------------------------
+@import '../../../../../bower_components/font-awesome/scss/font-awesome';
 
-/*--------------------------------------------------------------
-# Best bits & theme options
---------------------------------------------------------------*/
-@import "base";
-@import "config";
+// --------------------------------------------------------------
+// Best bits & theme options
+// --------------------------------------------------------------
+@import 'base';
+@import 'config';
 
-/*--------------------------------------------------------------
-# Mixins
---------------------------------------------------------------*/
-@import "../mixins/mixins-master";
-@import "../mixins/dudemixins";
+// --------------------------------------------------------------
+// Mixins
+// --------------------------------------------------------------
+@import '../mixins/mixins-master';
+@import '../mixins/dudemixins';
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "../typography/typography";
+// --------------------------------------------------------------
+// Typography
+// --------------------------------------------------------------
+@import '../typography/typography';
 
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "../navigation/navigation";
+// --------------------------------------------------------------
+// Navigation
+// --------------------------------------------------------------
+@import '../navigation/navigation';
 
-/*--------------------------------------------------------------
-# Forms and buttons
---------------------------------------------------------------*/
-@import "../forms/forms";
+// --------------------------------------------------------------
+// Forms and buttons
+// --------------------------------------------------------------
+@import '../forms/forms';
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "../media/media";
+// --------------------------------------------------------------
+// Media
+// --------------------------------------------------------------
+@import '../media/media';
 
-/*--------------------------------------------------------------
-# Layout start, the fundamentals >>>
---------------------------------------------------------------*/
+// --------------------------------------------------------------
+// Layout start, the fundamentals >>>
+// --------------------------------------------------------------
 .container {
   @include center($max_width: $container-desktop, $pad: $defaultpadding);
 }
 
 @media (min-width: $responsivenav) {
-  
   .header-container .site-header {
-      @include span(1/6);
+    @include span(1/6);
   }
 
   .nav {
-      @include span(5/6);
+    @include span(5/6);
   }
-
 }
 
 a,
@@ -110,44 +108,44 @@ body {
       padding: 0;
 
       a {
+        @include hiddentext();
+        background-image: url('../images/logo.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+
         font-family: $font__text;
         display: inline-block;
         width: $logo__width;
         height: $logo__height;
         margin-right: 0;
         margin-left: 0;
+        padding: 0;
 
         @media (max-width: $responsivenav) {
-        margin-left: auto;
-        margin-right: auto;
+          margin-left: auto;
+          margin-right: auto;
         }
-        padding: 0;
-        background-image: url(../images/logo.svg);
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-size: contain;
-        @include hiddentext;
       }
     }
 
     .nav-toggle {
-      position: absolute;
       @include rem('padding-left', 15px);
       @include rem('padding-top', 15px);
+      position: absolute;
       margin-left: 0;
       top: 1px;
       left: 0;
-      display: none;
       list-style: none;
       display: block;
       z-index: 100000;
 
       @media (min-width: $responsivenav) {
-        display: none;
+      display: none;
       }
 
       .burger-icon {
-        @include burger(20px, 3px, 3px, #ffffff);
+        @include burger(20px, 3px, 3px, #fff);
       }
 
       &.open .burger-icon {
@@ -162,9 +160,9 @@ body {
   @include rem('padding-bottom', 50px);
 }
 
-/*--------------------------------------------------------------
-# Page
---------------------------------------------------------------*/
+// --------------------------------------------------------------
+// Page
+// --------------------------------------------------------------
 .content-area {
   background: #fff;
 }
@@ -181,13 +179,13 @@ body {
 }
 
 .slide {
+  @include background-cover();
+  @include rem('padding-top', $slidepadding);
+  @include rem('padding-bottom', $slidepadding);
   position: relative;
   color: #fff;
   border: 0;
   background-color: #fff;
-  @include rem('padding-top', $slidepadding);
-  @include rem('padding-bottom', $slidepadding);
-  @include background-cover;
 
   .container {
     position: relative;
@@ -201,7 +199,7 @@ body {
 
   &.slide-front,
   &.slide-page {
-    background-image: url(../images/slide-default.jpg);
+    background-image: url('../images/slide-default.jpg');
 
     h1,
     h2 {
@@ -222,12 +220,12 @@ body {
   }
 }
 
-/*--------------------------------------------------------------
-# Blog
---------------------------------------------------------------*/
+// --------------------------------------------------------------
+// Blog
+// --------------------------------------------------------------
 .entry-content {
-  overflow: hidden;
   @include rem('margin-bottom', 50px);
+  overflow: hidden;
 
   img {
     max-width: $container-desktop;
@@ -240,18 +238,17 @@ body {
   }
 
   blockquote {
+    @include rem('padding-left', 20px);
     color: #666;
     font-weight: regular;
-    @include rem('padding-left', 20px);
-    @include rem('margin-left', 0);
+    margin-left: 0;
     border-left: 5px solid $color__alt;
-    quotes: "\201C""\201D""\20'18""\2019";
   }
 }
 
 .entry-title {
-  line-height: 1.2;
   @include rem('margin-bottom', 10px);
+  line-height: 1.2;
 
   &:first-child {
     margin-top: 0;
@@ -263,16 +260,16 @@ body {
 }
 
 .entry-time {
-  display: block;
-  color: #bbb;
   @include rem('margin-top', 20px);
   @include rem('margin-bottom', 30px);
+  display: block;
+  color: #bbb;
 }
 
 .post-meta {
-  clear: both;
   @include rem('margin-top', 50px);
   @include rem('margin-bottom', 50px);
+  clear: both;
 
   .fa {
     @include rem('margin-right', 5px);
@@ -290,8 +287,8 @@ body {
   }
 
   .fa-tags {
-    float: left;
     @include rem('margin-right', 8px);
+    float: left;
   }
 
   .tags {
@@ -300,22 +297,22 @@ body {
     padding: 0;
 
     li {
+      @include rem('margin-right', 10px);
+      @include rem('margin-bottom', 10px);
+      @include rem('line-height', 20px);
       display: inline;
       float: left;
       margin-top: 0;
       margin-left: 0;
-      @include rem('margin-right', 10px);
-      @include rem('margin-bottom', 10px);
-      @include rem('line-height', 20px);
 
       a {
-        display: inline-block;
-        border-radius: 4px;
-        background: #f0f0f0;
         @include rem('padding-top', 4px);
         @include rem('padding-bottom', 4px);
         @include rem('padding-left', 10px);
         @include rem('padding-right', 10px);
+        display: inline-block;
+        border-radius: 4px;
+        background: #f0f0f0;
 
         &:hover {
           color: #111;
@@ -330,53 +327,62 @@ body {
 // http://www.wpfill.me/
 
 .alignleft {
-    float: left;
-    margin: 0 15px 30px 0;
-}
-.aligncenter {
-    display: block;
-    margin: 0 auto 30px auto;
-}
-.alignright {
-    float: right;
-    margin: 0 0 30px 15px;
-}
-.alignnone {
-    float: none;
-    display: block;
-    margin: 0 0 30px 0;
-}
-.size-full {
-    width: 100%;
-    height: auto;
-    margin: 0 0 30px 0;
-}
-p .alignleft {
-    float: left;
-    margin: 5px 15px 30px 0;
-}
-p .aligncenter {
-    display: block;
-    margin: 5px auto 30px auto;
-}
-p .alignright {
-    float: right;
-    margin: 5px 0 30px 15px;
-}
-p .alignnone {
-    float: none;
-    display: block;
-    margin: 5px 0 30px 0;
-}
-p .size-full {
-    width: 100%;
-    height: auto;
-    margin: 5px 0 30px 0;
+  float: left;
+  margin: 0 15px 30px;
 }
 
-/*--------------------------------------------------------------
-# Archives and search
---------------------------------------------------------------*/
+.aligncenter {
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 30px;
+}
+
+.alignnone {
+  float: none;
+  display: block;
+  margin: 0 0 30px;
+}
+
+.size-full {
+  width: 100%;
+  height: auto;
+  margin: 0 0 30px;
+}
+
+p .alignleft {
+  float: left;
+  margin: 5px 15px 30px;
+}
+
+p .aligncenter {
+  display: block;
+  margin: 5px auto 30px;
+}
+
+p .alignright {
+  float: right;
+  margin: 5px 0 30px 15px;
+}
+
+p .alignnone {
+  float: none;
+  display: block;
+  margin: 5px 0 30px;
+}
+
+p .size-full {
+  width: 100%;
+  height: auto;
+  margin: 5px 0 30px;
+}
+
+// --------------------------------------------------------------
+// Archives and search
+// --------------------------------------------------------------
 .archive-header {
   margin-top: 0;
 }
@@ -387,14 +393,14 @@ p .size-full {
   }
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+// --------------------------------------------------------------
+// Footer
+// --------------------------------------------------------------
 .site-footer {
+  @include rem('padding', 20px);
   overflow: hidden;
   clear: both;
   margin: 0;
-  @include rem('padding', 20px);
   background: $color__background_footer;
 
   p {
@@ -405,11 +411,10 @@ p .size-full {
   }
 }
 
-/*--------------------------------------------------------------
-# Comments
---------------------------------------------------------------*/
+// --------------------------------------------------------------
+// Comments
+// --------------------------------------------------------------
 // NOTE: It's meant to use Disqus Comment system with this theme, so these are abandoned placeholder styles:
-
 .comment-respond {
   @include rem('margin-bottom', 30px);
 
@@ -427,9 +432,20 @@ p .size-full {
   float: left;
 }
 
-.comment-meta a {
-  text-decoration: underline;
-  color: #777;
+.comment-meta {
+  display: block;
+  clear: both;
+
+  a {
+    text-decoration: underline;
+    color: #777;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
+
 }
 
 .comment-meta,
@@ -437,63 +453,54 @@ a.comment-time,
 a:link.comment-time,
 a:visited.comment-time,
 .comment-time {
-  font-family: $font__text;
-  padding: 0;
-  text-decoration: none;
-  color: #999;
   @include rem('font-size', 16px);
   @include rem('line-height', 16px+7);
   @include rem('margin-top', 10px);
   @include rem('margin-left', 1px);
-}
-
-.comment-meta a:hover {
+  font-family: $font__text;
+  padding: 0;
   text-decoration: none;
-}
-
-.comment-meta {
-  display: block;
-  clear: both;
+  color: #999;
 }
 
 .ping-list {
   @include rem('margin-bottom', 40px);
-}
-
-.ping-list,
-.ping-list a {
-  color: #888;
   @include rem('font-size', 13px);
-}
+  color: #888;
 
-.ping-list cite a {
-  @include rem('margin-right', 15px);
-}
+  a {
+    @include rem('font-size', 13px);
+    color: #888;
+    text-decoration: underline;
 
-.ping-list a {
-  text-decoration: underline;
-}
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
-.ping-list a:hover {
-  text-decoration: none;
+  cite a {
+    @include rem('margin-right', 15px);
+  }
+
 }
 
 .comment-list {
+  @include rem('margin-top', 20px);
+  @include rem('margin-bottom', 20px);
   margin-right: 0;
   margin-left: 0;
   padding: 0;
-  @include rem('margin-top', 20px);
-  @include rem('margin-bottom', 20px);
-}
 
-.comment-list .avatar {
-  float: right;
-  overflow: hidden;
-  @include rem('margin-left', 20px);
+  .avatar {
+    @include rem('margin-left', 20px);
+    float: right;
+    overflow: hidden;
+  }
+
 }
 
 .comment-author img {
-  border-radius: 50% 50%;
+  border-radius: 50%;
 }
 
 .comments-wrap {
@@ -507,14 +514,14 @@ a:visited.comment-time,
 }
 
 .comment {
-  margin-right: 0;
-  margin-left: 0;
-  padding-right: 0;
-  padding-left: 0;
   @include rem('margin-top', 30px);
   @include rem('margin-bottom', 30px);
   @include rem('padding-top', 20px);
   @include rem('padding-bottom', 20px);
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 #commentform code {
@@ -540,9 +547,9 @@ a:visited.comment-time,
   border-color: #999;
 }
 
-/*--------------------------------------------------------------
-# Extra
---------------------------------------------------------------*/
+// --------------------------------------------------------------
+// Extra
+// --------------------------------------------------------------
 .screen-reader-text {
   display: none;
 }

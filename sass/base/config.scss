@@ -1,10 +1,9 @@
-/*--------------------------------------------------------------
-# Theme options
-
-Start here!
-This is the core file where most of the theme magic happens.
---------------------------------------------------------------*/
-
+// --------------------------------------------------------------
+// Theme options
+//
+// Start here!
+// This is the core file where most of the theme magic happens.
+// --------------------------------------------------------------
 // Logo
 $logo__width: 66px;
 $logo__height: 50px;
@@ -12,75 +11,94 @@ $logo__height: 50px;
 // Typography
 $font__size__min: 17px;
 $font__size__base: 19px;
-$font__size__baseline: $font__size__base; // Note: When using sanitize, this has to be 16px for correct rem-mixin results
+$font__size__baseline: $font__size__base;
+
+// Note: When using sanitize, this has to be 16px for correct rem-mixin results
 $font__headings: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-$font__text: "Noto Serif", "Helvetica Neue", Helvetica, sans-serif; 
+$font__text: "Noto Serif", "Helvetica Neue", Helvetica, sans-serif;
 $font__base: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 $font__special: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 
 // Colors
-$color__base: #222222;
-$color__alt: #F08A5D;
-$color__text: #555555;
+$color__base: #222;
+$color__alt: #f08a5d;
+$color__text: #555;
 $color__link: $color__alt;
 $color__link-visited: $color__alt;
 $color__link-hover: darken($color__alt, 15%);
 $color__grey: #a1acb5;
 $color__grey-light: #dce8ef;
 $color__grey-dark: #333;
-$color__background__alt: #31323F;
-$color__background_footer: #31323F;
+$color__background__alt: #31323f;
+$color__background_footer: #31323f;
 
 // Trunk navigation
 $trunk_bg: #1f2028;
-$trunk_txt: #ffffff;
+$trunk_txt: #fff;
 
 // Main navigation
 $menupadding: 0;
-$menutxt: #ffffff;
+$menutxt: #fff;
 $menutxtsize: base;
-$menuhover: rgba($menutxt,0.5);
+$menuhover: rgba($menutxt, .5);
 $menuactive: $color__alt;
-$nav_bg: #333333;
+$nav_bg: #333;
 $top_level: $color__background__alt;
-$second_level: lighten($nav_bg,2);
-$third_level: lighten($nav_bg,4);
-$fourth_level: lighten($nav_bg,6);
+$second_level: lighten($nav_bg, 2);
+$third_level: lighten($nav_bg, 4);
+$fourth_level: lighten($nav_bg, 6);
 
-/* Dude breakpoints */
-$layout-max-width: 100%; /* default: 1600px */
-$container-tv: 1824px; /* default: 1824px */
-$container-large: 1224px; /* default: 1224px */
-$container-desktop: 960px; /* default: 1170px */
-$container-landscape-ipad: 960px; /* default: 970px */
-$container-ipad: 770px; /* default: 750px */
-$container-mobile: 480px; /* default: 480px */
-$responsivenav: 872px; /* set to navigation width */
+// Dude breakpoints
+$layout-max-width: 100%;
+
+// default: 1600px
+$container-tv: 1824px;
+
+// default: 1824px
+$container-large: 1224px;
+
+// default: 1224px
+$container-desktop: 960px;
+
+// default: 1170px
+$container-landscape-ipad: 960px;
+
+// default: 970px
+$container-ipad: 770px;
+
+// default: 750px
+$container-mobile: 480px;
+
+// default: 480px
+$responsivenav: 872px;
+
+// set to navigation width
 $defaultpadding: 20px;
 $slidepadding: 100px;
 
-/* Buttons */
+// Buttons
 $buttonpadding-vertical: 15px;
 $buttonpadding-horizontal: 27px;
-$buttontxtcolor: #ffffff;
+$buttontxtcolor: #fff;
 
 // Apply a natural box layout model to all elements
 // Update: http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-
 #page {
-	max-width: $layout-max-width;
-	margin-left: auto;
-	margin-right: auto;
+  max-width: $layout-max-width;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-html { 
-	box-sizing: border-box; 
+html {
+  box-sizing: border-box;
 }
 
-*, *:before, *:after { 
-	box-sizing: inherit; 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-img { 
-	box-sizing: content-box; 
+img {
+  box-sizing: content-box;
 }
