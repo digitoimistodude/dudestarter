@@ -12,10 +12,10 @@ endif;
     $file = $break[count($break) - 1];
     $cachefile = $path.'/cached-facebook.html';
     $cachetime = 1800; // 1800 = puoli tuntia, 3600 = 1h, 7200 = 2h
-    
+
     date_default_timezone_set('Europe/Helsinki');
     setlocale(LC_ALL, 'fi_FI.UTF-8');
-    
+
     // Serve from the cache if it is younger than $cachetime
     if (getenv('WP_ENV') != "development" && file_exists($cachefile) && time() - $cachetime < filemtime($cachefile)) {
         echo "<!-- Cachetettu HTML-kopio, generoitu klo ".date('H:i', filemtime($cachefile))." -->\n";
@@ -58,7 +58,7 @@ $showtime               = true; // Näytetäänkö aika
 // Sessio alkaa
 
 $facebook = new Facebook($config);
-$pagefeed = $facebook->api("/" . $pageid . "/feed");
+$pagefeed = $facebook->api("/" . $pageid . "/posts");
 $photos = $facebook->api("/" . $pageid . "/photos");
 $albums = $facebook->api("/" . $pageid . "/albums");
 
@@ -85,16 +85,16 @@ $postid = $postidexplode[1];
 
 // Määritetään oletuspäivitys
 
-if( isset($post['story']) ) : 
+if( isset($post['story']) ) :
     $tarina = $post['story'];
-else : 
+else :
     $tarina = $post['message'];
 endif;
 
 // Klikattavat linkit
 
-if( isset($tarina) ) : 
-    $tarina = preg_replace('"\b(http://\S+)"', '<a href="$1">$1</a>', $tarina); 
+if( isset($tarina) ) :
+    $tarina = preg_replace('"\b(http://\S+)"', '<a href="$1">$1</a>', $tarina);
 endif;
 
 // Debug
@@ -108,8 +108,8 @@ endif;
 // Karsitaan tykkäykset ym. turhat pois mitä ei haluta näyttää
 
 if(
-    !strpos($tarina,'likes') !== false 
-    && !strpos($tarina,'commented') !== false 
+    !strpos($tarina,'likes') !== false
+    && !strpos($tarina,'commented') !== false
     && !strpos($tarina,'updated their cover photo') !== false
 
     // Päivityksen pitää tulla sivun omistajalta
@@ -118,9 +118,9 @@ if(
 
     if ( empty($tarina) === false ) :
 
-            if (str_word_count($tarina) > $sanarajoitus) : 
+            if (str_word_count($tarina) > $sanarajoitus) :
                 $tarina = limit_words($tarina,$sanarajoitus) . "...";
-            endif; 
+            endif;
 
 
             // Käydään läpi erityyppisiä päivitys-skenaarioita ja haetaan oikeat tekstit päivitykseen
@@ -130,7 +130,7 @@ if(
                     $tarina = $post['description'];
                 elseif( strpos($post['story'],'photos') || strpos($post['story'],'photo') || strpos($post['story'],'updated their status') || !isset($post['story']) ) :
                     $tarina = $post['message'];
-                else : 
+                else :
                     $tarina = $post['story'];
                 endif;
             endif;
@@ -149,7 +149,7 @@ if(
         <?php
 
     endif;
-    
+
     if($laskuri == $statusrajoitus) :
         break;
     endif;
