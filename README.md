@@ -81,7 +81,6 @@ Dudestarter is licensed with [The MIT License (MIT)](http://choosealicense.com/l
 * All times and local units in Finnish
 * More accurate time in WP Last Login
 * Uploads folder: www.yoursite.com/media instead of www.yoursite.com/content/uploads
-* Custom uploads folder instead of default content/uploads
 * Default pages automatically selected for Front Page and blog home
 * Hiding things customers won't usually need
 * Automatic Feed Links in head
