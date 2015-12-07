@@ -117,7 +117,7 @@ Go through [Dudestack Instructions](https://github.com/digitoimistodude/dudestac
 1. Clone this repository and unpack it to your project folder (or under test directory, for example for us it's `~/Projects/dudetest/content/themes/dudestarter`)
 2. Edit `STARTERTHEMEPATH` to point out to dudestarter in `newtheme.sh`
 3. Run `newtheme.sh` (requires [Dudestack](https://github.com/digitoimistodude/dudestack)'s `createproject` command to be run before)
-4. `npm install`
+4. Go to Projects folder and run `npm install`
 5. Run `gulp watch` in project-folder
 6. Start with `sass/base/config.scss` and continue editing from there. The main CSS file will always be `sass/base/layout.scss`.
 
