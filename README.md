@@ -48,8 +48,8 @@ Dudestarter is licensed with [The MIT License (MIT)](http://choosealicense.com/l
 
 #### Typography
 
-* Scalable and responsive typography with font stacks: [Typographic](https://github.com/corysimmons/typographic) 
-* Add Google Webfonts with Penman's [Sass-Web-Fonts](https://github.com/penman/Sass-Web-Fonts) and custom web fonts with [Sass Boilerplate's fontFace-mixin](https://github.com/magnetikonline/sassboilerplate/blob/master/fontface.scss)
+* Scalable and responsive typography with font stacks: [Typographic](https://github.com/corysimmons/typographic)
+* Google Webfonts with Penman's [Sass-Web-Fonts](https://github.com/penman/Sass-Web-Fonts) and custom web fonts with [Sass Boilerplate's fontFace-mixin](https://github.com/magnetikonline/sassboilerplate/blob/master/fontface.scss)
 * REM units with pixel fallback: [sass-rem](https://github.com/pierreburel/sass-rem) `@include rem('padding', '10px)`
 * [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) Glyph icons
 
@@ -89,7 +89,7 @@ Dudestarter is licensed with [The MIT License (MIT)](http://choosealicense.com/l
 * Editable navigation menus, custom dude navigation walker
 * Disabled WordPress Admin Bar
 
-#### Integrations 
+#### Integrations
 
 * Dude's custom Facebook SDK for Facebook feeds
 * Google Maps (Javascript API) for contact page
