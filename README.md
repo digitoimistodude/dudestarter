@@ -106,7 +106,7 @@ Mostly not needed, because customizing so much stuff per project. (*Don't Repeat
 
 ### Requirements
 
-* Mac OS X (development only - not tested on other systems, but feel free to try on and report back)
+* Mac OS X (development only - not tested on other systems, but feel free to try and report back)
 * [Devpackages](https://github.com/digitoimistodude/devpackages) - Npm, Gulp and Bower
 * [Dudestack](https://github.com/digitoimistodude/dudestack) - A toolkit for creating a new professional WordPress project with deployments. Heavily based on Bedrock by Roots.
 
