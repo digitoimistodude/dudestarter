@@ -43,7 +43,7 @@ cd $STARTERTHEMEPATH
 git pull
 echo "${yellow}Copying starter theme to project folder ${HOME}/Projects/${PROJECTNAME}/content/themes/${THEMENAME}${txtreset}"
 
-cp -R ${STARTERTHEMEPATH} ${PROJECTTHEMEPATH} 
+cp -R ${STARTERTHEMEPATH} ${PROJECTTHEMEPATH}
 echo "${yellow}Generating theme files${txtreset}"
 
 sed -e "s/\THEMENAME/$THEMENAME/" ${STARTERTHEMEPATH}/404.php > ${PROJECTTHEMEPATH}/404.php
@@ -119,6 +119,7 @@ rm -f ${PROJECTTHEMEPATH}/.gitignore
 rm -f ${PROJECTTHEMEPATH}/TODO.todo
 rm -f ${PROJECTTHEMEPATH}/images/logo.psd
 rm ${PROJECTTHEMEPATH}/README.md
+rm ${PROJECTTHEMEPATH}/LICENSE.md
 echo "${yellow}Adding media library folder...${txtreset}"
 mkdir -p ${PROJECTPATH}/media
 chmod 777 ${PROJECTPATH}/media
