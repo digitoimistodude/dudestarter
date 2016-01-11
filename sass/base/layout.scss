@@ -1,58 +1,27 @@
-// --------------------------------------------------------------
-// Root
-// --------------------------------------------------------------
 @charset 'UTF-8' ;
 
-// --------------------------------------------------------------
-// Reset
-// --------------------------------------------------------------
-@import '../../../../../bower_components/normalize-scss/normalize.scss';
-
-// --------------------------------------------------------------
-// Grid
-// --------------------------------------------------------------
-@import '../../../../../bower_components/jeet/scss/jeet/index';
-
-// --------------------------------------------------------------
-// Glyph icons
-// --------------------------------------------------------------
-@import '../../../../../bower_components/font-awesome/scss/font-awesome';
-
-// --------------------------------------------------------------
-// Best bits & theme options
-// --------------------------------------------------------------
-@import 'base';
+// Theme options
 @import 'config';
 
-// --------------------------------------------------------------
-// Mixins
-// --------------------------------------------------------------
-@import '../mixins/mixins-master';
-@import '../mixins/dudemixins';
+// Structure, grid
+@import '../../../../../bower_components/normalize-scss/normalize.scss';
+@import '../../../../../bower_components/jeet/scss/jeet/index';
+@import 'pure';
 
-// --------------------------------------------------------------
-// Typography
-// --------------------------------------------------------------
+// Helpers
+@import 'mixins';
+
+// WordPress base stuff, alignments, accessibility
+@import 'base';
+
+// Typography, icons
+@import '../../../../../bower_components/font-awesome/scss/font-awesome';
 @import '../typography/typography';
 
-// --------------------------------------------------------------
 // Navigation
-// --------------------------------------------------------------
 @import '../navigation/navigation';
 
-// --------------------------------------------------------------
-// Forms and buttons
-// --------------------------------------------------------------
-@import '../forms/forms';
-
-// --------------------------------------------------------------
-// Media
-// --------------------------------------------------------------
-@import '../media/media';
-
-// --------------------------------------------------------------
-// Layout start, the fundamentals >>>
-// --------------------------------------------------------------
+// Layout start
 .container {
   @include center($max_width: $container-desktop, $pad: $defaultpadding);
 }
@@ -116,8 +85,8 @@ body {
 
         font-family: $font__text;
         display: inline-block;
-        width: $logo__width;
-        height: $logo__height;
+        width: 66px;
+        height: 50px;
         margin-right: 0;
         margin-left: 0;
         padding: 0;
@@ -141,7 +110,7 @@ body {
       z-index: 100000;
 
       @media (min-width: $responsivenav) {
-      display: none;
+        display: none;
       }
 
       .burger-icon {
@@ -323,66 +292,7 @@ body {
   }
 }
 
-// WordPress Image Styling
-// http://www.wpfill.me/
-
-.alignleft {
-  float: left;
-  margin: 0 15px 30px;
-}
-
-.aligncenter {
-  display: block;
-  margin: 0 auto 30px;
-}
-
-.alignright {
-  float: right;
-  margin: 0 0 30px;
-}
-
-.alignnone {
-  float: none;
-  display: block;
-  margin: 0 0 30px;
-}
-
-.size-full {
-  width: 100%;
-  height: auto;
-  margin: 0 0 30px;
-}
-
-p .alignleft {
-  float: left;
-  margin: 5px 15px 30px;
-}
-
-p .aligncenter {
-  display: block;
-  margin: 5px auto 30px;
-}
-
-p .alignright {
-  float: right;
-  margin: 5px 0 30px 15px;
-}
-
-p .alignnone {
-  float: none;
-  display: block;
-  margin: 5px 0 30px;
-}
-
-p .size-full {
-  width: 100%;
-  height: auto;
-  margin: 5px 0 30px;
-}
-
-// --------------------------------------------------------------
-// Archives and search
-// --------------------------------------------------------------
+// Archives & search
 .archive-header {
   margin-top: 0;
 }
@@ -393,9 +303,7 @@ p .size-full {
   }
 }
 
-// --------------------------------------------------------------
 // Footer
-// --------------------------------------------------------------
 .site-footer {
   @include rem('padding', 20px);
   overflow: hidden;
@@ -547,9 +455,7 @@ a:visited.comment-time,
   border-color: #999;
 }
 
-// --------------------------------------------------------------
 // Extra
-// --------------------------------------------------------------
 .screen-reader-text {
   display: none;
 }

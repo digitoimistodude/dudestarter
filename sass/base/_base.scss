@@ -1,0 +1,237 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+// WordPress media
+// Media
+.page-content,
+.entry-content,
+.comment-content {
+  img.wp-smiley {
+    border: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+// Captions
+.wp-caption {
+  margin-bottom: .9375rem;
+  max-width: 100%;
+
+  img[class*="wp-image-"] {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .wp-caption-text {
+    text-align: left;
+    font-style: italic;
+    border-bottom: 2px solid #ccc;
+    padding: 1rem 0;
+  }
+}
+
+// Galleries
+.gallery {
+  @extend %clearfix;
+  margin-bottom: .9375rem;
+
+  .gallery-itrem {
+    float: left;
+
+    .gallery-icon {
+      a {
+        display: block;
+      }
+
+      img {
+        border: 0;
+        height: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    .gallery-caption {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+// Make sure embeds and iframes fit their containers.
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+// Formattings, alingments
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  @include center-block;
+}
+
+// Clearing
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  @include clearfix;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  @include clearfix-after;
+}
+
+// WordPress Image Styling
+// http://www.wpfill.me/
+.alignnone {
+  float: none;
+  display: block;
+  margin: 0 0 30px;
+}
+
+p .alignleft {
+  float: left;
+  margin: 5px 15px 30px;
+}
+
+p .aligncenter {
+  display: block;
+  margin: 5px auto 30px;
+}
+
+p .alignright {
+  float: right;
+  margin: 5px 0 30px 15px;
+}
+
+p .alignnone {
+  float: none;
+  display: block;
+  margin: 5px 0 30px;
+}
+
+// Accessibility
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include font-size(.875);
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(#000, .6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; // Above WP toolbar.
+  }
+}
+
+// Buttons
+.button,
+a.button,
+a.button:link,
+a.button:visited {
+  min-width: 150px;
+  max-width: 250px;
+  display: inline-block;
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 33px;
+  padding-right: 33px;
+  border: 0;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  transition: .12s;
+
+  // Additional settings:
+  font-weight: bold;
+
+  // text-transform: uppercase;
+  letter-spacing: 0;
+  background: $color__alt;
+  color: #fff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: darken($color__alt, 15%);
+    color: darken(#fff, 15%);
+    border-color: $color__alt;
+  }
+
+  &.button-border {
+    border-width: 3px;
+    border-style: solid;
+    border-color: $color__alt;
+    background-color: transparent;
+
+    &:hover {
+      color: $color__base;
+      border-color: $color__base;
+      background: $color__alt;
+    }
+  }
+
+  &.button-white {
+    color: #fff;
+    border-color: #fff;
+
+    &:hover {
+      color: $color__base;
+      border-color: #fff;
+      background: #fff;
+    }
+  }
+}
