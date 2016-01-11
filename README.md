@@ -24,7 +24,7 @@ This is a WordPress theme for starting new projects used by [Digitoimisto Dude O
 
 ### Please note before using
 
-Dudestarter is a **development theme**, so it has updates almost daily. By using this starter theme, you agree that the fonts can change, layout can change, everything can change, and they will, without a warning. Version 1 looked quite different than version 3. It was like a different theme. After all, this is a development theme for Dude's personal preferences and principles.
+Dudestarter is a **development theme**, so it has updates very often. By using this starter theme, you agree that the fonts can change, layout can change, everything can change, and they will, without a warning. Version 1 looked quite different than version 3. It was like a different theme. After all, this is a development theme for Dude's personal preferences and principles.
 
 Dudestarter is not meant to be "a theme for everyone", so it doesn't have customizers (wp-admin options), easy functions, separated theme parts (except template-parts) or any specifically easy to use stuff. This is now open-sourced, but includes a lot of custom stuff that **will not** work out of the box.
 
