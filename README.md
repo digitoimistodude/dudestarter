@@ -2,6 +2,8 @@
 
 This is a WordPress theme for starting new projects used by [Digitoimisto Dude Oy](https://www.dude.fi). It's heavily based on Automattic's [Underscores](https://github.com/Automattic/_s). The goal is to get feature rich theme for developers, but not bloated in any way.
 
+**Please note: This theme is currently not maintained and more and less abandoded and replaced by our flagship [WordPress starter theme air](https://github.com/digitoimistodude/air).**
+
 ![](https://pbs.twimg.com/media/CMTIcEOXAAEEvf_.png:large "Screenshot")
 
 ## Table of contents

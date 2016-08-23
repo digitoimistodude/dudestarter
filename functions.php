@@ -31,7 +31,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
  * ACF options page
  */
 if( function_exists('acf_add_options_page') ) {
-  
+
   acf_add_options_page(array(
     'page_title'  => 'Footer',
     'menu_title'  => 'Footer',
@@ -39,13 +39,13 @@ if( function_exists('acf_add_options_page') ) {
     'capability'  => 'edit_posts',
     'redirect'    => false
   ));
-  
+
   // acf_add_options_sub_page(array(
   //   'page_title'  => '',
   //   'menu_title'  => '',
   //   'parent_slug' => '',
   // ));
-  
+
 }
 
 /*
@@ -110,7 +110,7 @@ add_filter( 'option_uploads_use_yearmonth_folders', '__return_false', 100 );
  * Hidden blog menu items by default.
  * Comment these out if you want to use blog or comments.
  */
-function menuitems_remove() { 
+function menuitems_remove() {
    remove_menu_page('edit.php');
    remove_menu_page('edit-comments.php');
 }
@@ -123,9 +123,9 @@ add_action('admin_menu', 'menuitems_remove');
 function remove_admin_menu_links() {
     $user = wp_get_current_user();
     if( $user && isset($user->user_email) && 'roni@dude.fi' == $user->user_email || 'juha@dude.fi' == $user->user_email ) {
-      
+
       // For testing:
-      // if( $user && isset($user->user_email) && 'roni@dude.fi' == $user->user_email) { 
+      // if( $user && isset($user->user_email) && 'roni@dude.fi' == $user->user_email) {
 
     } else {
 
@@ -179,17 +179,17 @@ function oma_jquery() {
 /**
  * Custom comments and pingbacks.
  * A Strategy To Separate Comments and Pingbacks in WordPress
- * 
+ *
  * See also templates comments.php, callback-comments.php and callback-pingbacks.php.
  * If you use Disqus Comment System or Jetpack for comments they will naturally replace WordPress comment templates.
  *
  * @link https://tommcfarlin.com/separate-comments-and-pingbacks/
  */
 function acme_post_has( $type, $post_id ) {
- 
+
   $comments = get_comments('status=approve&type=' . $type . '&post_id=' . $post_id );
   $comments = separate_comments( $comments );
- 
+
   return 0 < count( $comments[ $type ] );
 }
 
